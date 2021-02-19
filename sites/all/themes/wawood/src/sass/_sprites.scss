@@ -1,0 +1,16 @@
+.sprites .sprite
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sprites .audio, .sprite.audio{top:0px;left:0px;
+width:17px;height:14px;background: url("../img/sprites.png") no-repeat -0px -28px;}
+.sprites .instagram, .sprite.instagram{top:0px;left:0px;
+width:17px;height:14px;background: url("../img/sprites.png") no-repeat -0px -0px;}
+.sprites .linkedin, .sprite.linkedin{top:0px;left:0px;
+width:17px;height:14px;background: url("../img/sprites.png") no-repeat -17px -0px;}
+.sprites .mail, .sprite.mail{top:0px;left:0px;
+width:17px;height:14px;background: url("../img/sprites.png") no-repeat -0px -14px;}
+.sprites .pinterest, .sprite.pinterest{top:0px;left:0px;
+width:17px;height:14px;background: url("../img/sprites.png") no-repeat -17px -14px;}

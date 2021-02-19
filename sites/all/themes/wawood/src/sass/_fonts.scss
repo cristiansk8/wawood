@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Chronicle';
+  src: url("../fonts/ChronicleTextG1-Roman-Pro.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chronicle';
+  src: url("../fonts/ChronicleTextG3-Semibd-Pro.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+$font-size-xxl: 2.2em;
+$font-size-xl: 1.8em;
+$font-size-l: 1.5em;
+$font-size-m: 1.2em;
+$font-size-n: 14px;
+$font-size-s: .9em;
+$font-size-xs: .8em;
+
+.font-normal
+{
+	font-family: $font-normal;
+	font-size: $font-size-n;
+}
+
+.font-raleway
+{
+	font-family: 'Raleway';
+}
+
+.font-light
+{
+	font-weight: 200;
+}
+
+.font-regular
+{
+	font-weight: normal;
+}
+
+.font-bold
+{
+	font-weight: 500;
+}
+
+.font-size-xs
+{
+	font-size: $font-size-xs;
+}
+
+.font-size-s
+{
+	font-size: $font-size-s;
+}
+
+.font-size-n
+{
+	font-size: $font-size-n;
+}
+
+.font-size-m
+{
+	font-size: $font-size-m;
+}
+
+.font-size-l
+{
+	font-size: $font-size-l;
+	
+	@media (max-width:$screen-sm - 1)
+	{
+		font-size: $font-size-m;
+	}
+}
+
+.font-size-xl
+{
+	font-size: $font-size-xl;
+
+	@media (max-width:$screen-sm - 1)
+	{
+		font-size: $font-size-m;
+	}
+}
+
+.font-size-xxl
+{
+	font-size: $font-size-xxl;
+	
+	@media (max-width:$screen-sm - 1)
+	{
+		font-size: $font-size-l;
+	}
+}

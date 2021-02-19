@@ -1,0 +1,4 @@
+name = Website
+description = Containts specific website logic.
+core = 7.x
+

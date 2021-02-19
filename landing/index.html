@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <title>Wawood Studio</title>
+    <style>
+      HTML, BODY
+      {
+        margin: 0;
+        padding: 0;
+      }
+      .coming-soon
+      {
+        max-width: 100%;
+      }
+      TABLE
+      {
+        width: 100%;
+        max-width: 1200px;
+        height: 100vh;
+        border-collapse: collapse;
+        margin: 0 auto;
+        text-align: center;
+      }
+      TD
+      {
+
+      }
+      TD.image
+      {
+        background: #f2f2f4;
+        padding: 10px 0;
+        width: 64%;
+      }
+      TD.links
+      {
+        vertical-align: top;
+        padding: 10px;
+        background: #ffffff;
+      }
+      TD.links IMG
+      {
+        width: 30px;
+        height: auto;
+      }
+
+      TD.contact
+      {
+        background: #f2f2f4;
+        vertical-align: middle;
+        text-align: center;
+        width: 35%;
+      }
+
+      TD.contact .content
+      {
+        padding-top: 65%;
+      }
+      
+      TD.contact IMG
+      {
+        max-width: 100%;
+        margin-bottom: 25px;
+        height: auto;
+      }
+      
+      TR.contact-xs
+      {
+        display: none;
+      }
+
+      TD.contact-xs .content
+      {
+        display: none;
+      }
+      
+      .font-circular
+      {
+        font-family: circular, georgia, sans;
+      }
+
+      @media (max-width: 767px)
+      {
+        TD.image
+        {
+          vertical-align: top;
+          width: 100%;
+        }
+        TD.contact
+        {
+          width: 0;
+        }
+        TD.contact .content
+        {
+          display: none;
+        }
+        TR.contact-xs
+        {
+          display: table-row;
+          background: #f2f2f4;
+        }
+        TD.contact-xs .content
+        {
+          display: block;
+        }
+      }
+      
+      @font-face{
+        font-family: Circular;
+        src: url(CircularStd-Book.otf);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+    	<tbody>
+    		<tr>
+    			<td class="image"><img class="coming-soon" src="coming-soon.jpg"></td>
+    			<td class="contact font-circular">
+      			<div class="content">
+        			<img class="coming-soon" src="contact-logo.jpg"><br>
+        			<p>CONTACT US</p>
+        			<p><a href="mailto:contact@wawoodstudio.com" target="_blank">contact@wawoodstudio.com</a></p>
+        			<p>+ 33 0 6 52 43 76 71</p>
+      			</div>
+          </td>
+      		</td>
+    			<td class="links">
+      			<a href="mailto:ingrid.engel@wawoodstudio.com" target="_blank"><img src="email.jpg"></a><br>
+      			<a href="https://www.instagram.com/wawoodstudio" target="_blank"><img src="instagram.jpg"></a>
+    			</td>
+    		</tr>
+    		<tr class="contact-xs">
+    			<td colspan="2" class="font-circular">
+      			<div class="content">
+        			<img class="coming-soon" src="contact-logo.jpg"><br>
+        			<p>CONTACT US</p>
+        			<p><a href="mailto:contact@wawoodstudio.com" target="_blank">contact@wawoodstudio.com</a></p>
+        			<p>+ 33 0 6 52 43 76 71</p>
+      			</div>
+          </td>
+    			<td class="links"></td>
+    		</tr>
+    	</tbody>
+    </table>
+    
+  </body>
+</html>

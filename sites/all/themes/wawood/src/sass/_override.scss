@@ -1,0 +1,108 @@
+.container
+{
+
+	padding: 40px 20px;
+
+	@media (min-width:$screen-lg)
+	{
+		padding: 60px 80px 40px;
+		width: 1200px;
+	}
+	
+	@media (max-width:$screen-sm - 1)
+	{
+		padding: 15px;
+		padding-right: 20px; 
+	}
+	
+	position: relative;
+//	border: 1px solid;
+}
+
+.modal
+{
+  .modal-content
+  {
+    border-radius: 0;
+    box-shadow: none;
+		border: none;
+//		background: $blue-1;
+  }
+  
+  .modal-header
+  {
+    min-height: 0;
+  }
+  
+  .modal-body
+  {
+    padding: 0;
+  }
+  
+  .modal-dialog
+  {
+    width: calc(100% - 30px);
+    max-width: 900px;
+    bottom: 0;
+    margin-top: 20px;
+  }
+
+  .modal-header
+  {
+    border: none;
+    padding: 0;
+    
+    .close
+    {
+      position: absolute;
+			padding: 0;
+      right: 30px;
+      top: 30px;
+			border: 1px solid;
+      z-index: 10;
+			font-size: 25px;
+			font-weight: bold;
+			color: $gray-3;
+			background: none;
+			line-height: 1.3em;
+			height: 1.3em;
+			width: 1.3em;
+			border-radius: 50%;
+			text-align: center;
+			transition: all .3s;
+			
+			&:hover
+			{
+				color: $black;
+			}
+			
+			@media (max-width:$screen-sm - 1)
+			{
+				font-size: 15px;
+			}
+    }
+  }
+  
+  .modal-caption
+  {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+//    background: rgba($pink-1-multiply, .65);
+//    color: $white;
+    padding: 10px 30px;
+    
+    @media (max-width:$screen-sm - 1)
+    {
+//      background: $blue-1;
+      position: static;
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+.modal-backdrop
+{
+	background: $white;
+}

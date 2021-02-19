@@ -1,0 +1,384 @@
+.section-divisor
+{
+	border-bottom: 2px solid;
+	width: 150px;
+	display: inline-block;
+}
+	
+
+SECTION
+{
+	margin: 70px 0;
+	padding: 0 60px;
+	position: relative;
+	
+	.title
+	{
+		text-transform: uppercase;
+		color: $blue-wawood;
+		letter-spacing: .3em;
+	}
+	
+	.body
+	{
+		margin: 60px 0;
+
+		@media (max-width:$screen-sm - 1)
+		{
+			margin: 15px 0;
+		}
+	}
+	
+	.headline
+	{
+		margin: 60px 0;
+
+		@media (max-width:$screen-sm - 1)
+		{
+			margin: 15px 0;
+		}
+	}
+	
+	.subhead
+	{
+		max-width: 600px;
+		display: inline-block;
+	}
+	
+	.divisor
+	{
+		margin: 60px 0 40px;
+		border-bottom: 2px solid;
+		width: 150px;
+		display: inline-block;
+	}
+	
+	@media (max-width:$screen-sm - 1)
+	{
+		padding: 10px;
+	}
+}
+
+SECTION.the-studio
+{
+	.background
+	{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		background-color: $gray-8;
+		left: 0;
+		top: 130px;
+		height: 520px;
+	}
+	
+	.title
+	{
+		height: 85px;
+		max-width: 713px;
+    padding-top: 10px;
+		width: 100%;
+		display: inline-block;
+		background: white;// url(../img/wawood-studio.png) no-repeat center;
+	}
+  
+  .body
+  {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .subhead
+  {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+SECTION.services
+{
+	background-color: $gray-8;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 150px;
+	
+	H2
+	{
+		margin-bottom: 30px;
+		margin-top: 30px;
+		letter-spacing: 2px;
+	}
+
+	.title
+	{
+		height: 65px;
+		max-width: 713px;
+		width: 100%;
+		display: inline-block;
+		background: white;
+    transform: translateY(-15px);
+	}
+	
+	.body
+	{
+		display: inline-block;
+		max-width: 800px;
+		margin-bottom: 40px;
+	}
+	
+	.subhead
+	{
+		max-width: 900px;
+		background: $white;
+		margin-top: -100px;
+		position: relative;
+		top: 100px;
+    
+    @media (min-width:$screen-sm)
+    {
+      padding: 40px;
+    }
+    
+    @media (max-width:$screen-sm - 1)
+    {
+      padding: 40px 10px;
+    }
+		//transform: translateY(-100px);
+	}
+	
+	.services-list
+	{
+		margin-bottom: 60px;
+		
+		.service
+		{
+			margin-top: 15px;
+			margin-botom: 15px;
+			padding: 40px 30px;
+			background: $white;
+			
+			P
+			{
+				margin-bottom: 6px;
+			}
+			
+			@media (min-width:$screen-lg)
+			{
+				min-height: 545px;
+			}
+			
+			@media (min-width:$screen-md) AND (max-width:$screen-lg - 1)
+			{
+				min-height: 580px;
+			}
+
+			@media (min-width:$screen-sm) AND (max-width:$screen-md - 1)
+			{
+				padding: 40px 10px;
+				min-height: 580px;
+			}
+
+		}
+	}
+	
+}
+
+SECTION.about-us
+{
+	background-color: $gray-8;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	
+	.title
+	{
+		margin: 30px;
+	}
+	
+	.subhead
+	{
+		max-width: 900px;
+	}
+	
+	.image
+	{
+		margin-top: 40px;
+	}
+	
+	.body
+	{
+		margin-top: 0;
+		@media (min-width:$screen-sm)
+		{
+			margin-left: 30px;
+		}
+		
+		@media (max-width:$screen-sm - 1)
+		{
+			margin-top: 20px;
+		}
+	}
+}
+
+SECTION.contact
+{
+	padding:0;
+
+	.title
+	{
+		margin: 30px;
+	}
+	
+	.image
+	{
+		margin-right: 30px;
+	}
+	
+	.body
+	{
+		margin: 30px 0;
+	}
+  
+  .subhead
+  {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  
+  .headline
+  {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+	
+  .bg-gray-8
+  {
+    @media (min-width:$screen-sm)
+    {
+      margin: 10px 30px;
+      padding: 20px;
+    }
+    
+    @media (max-width:$screen-sm - 1)
+    {
+      padding: 20px 10px;
+    }
+  }
+  
+  .section-divisor
+  {
+    border-color: $white;
+  }
+  
+	.background
+	{
+		top: 20px;
+		height: 520px;
+
+	}
+	
+	.form
+	{
+		background: url(../img/contact-bg.jpg) no-repeat center;
+		background-size: cover;
+		padding: 40px;
+		
+		@media (max-width:$screen-sm - 1)
+		{
+			padding: 40px 10px;
+		}
+		
+		FORM
+		{
+			max-width: 500px;
+			width: 100%;
+			display: inline-block;
+			
+			INPUT[type=text]
+			{
+				border: none;
+				appareance: none;
+				width: 80%;
+				width: calc(100% - 80px);
+				font-family: inherit;
+				font-size: inherit;
+				color: inherit;
+				outline: none;
+			}
+			
+			TEXTAREA
+			{
+				display: block;
+				width: 100%;
+				border: none;
+				resize: none;
+				height: 200px;
+				font-family: inherit;
+				font-size: inherit;
+				color: inherit;
+			}
+			
+			.actions
+			{
+				margin-top: 10px;
+			}
+			
+			.submit
+			{
+				appareance: none;
+				border: 1px solid $black;
+				background: $white;
+				color: $black;
+				padding: 8px 20px;
+				text-transform: uppercase;
+        transition: all .4s;
+        
+        &:hover
+        {
+          background: $black;
+          color: $white;
+        }
+        
+			}
+      
+      &.submitted :invalid
+      {
+        background-color: rgba(#f00, .2);
+      }
+
+		}
+		
+		LABEL
+		{
+			display: block;
+			margin: 10px 0;
+			border: 1px solid $black;
+			background: $white;
+			padding: 15px 10px;
+			vertical-align: middle;
+			
+			.label
+			{
+				display: inline-block;
+				width: 70px;
+			}
+		}
+		
+	}
+}
+
+.service-image
+{
+	
+	@media (max-width:$screen-sm - 1)
+	{
+		margin-left: -90px;
+		margin-right: -90px;
+	}
+}

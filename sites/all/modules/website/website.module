@@ -1,0 +1,181 @@
+<?php
+
+/**
+ * @file
+ * defines the module clean_field_markup.
+ */
+
+function website_menu()
+{
+  return array(
+    'ajax/node/%' => array(
+      'title' => 'Productos',
+      'page callback' => '_website_ajax_node_view',
+      'access callback' => TRUE,
+      'page arguments' => array(2),
+      'type' => MENU_CALLBACK,
+    ),
+    'ajax/services' => array(
+      'title' => 'Services',
+      'page callback' => '_website_ajax_services',
+      'access callback' => TRUE,
+      'page arguments' => array(),
+      'type' => MENU_CALLBACK,
+    ),
+    'ajax/sendmail' => array(
+      'title' => 'Sendmail',
+      'page callback' => '_website_ajax_sendmail',
+      'access callback' => TRUE,
+      'page arguments' => array(2),
+      'type' => MENU_CALLBACK,
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function website_block_info() {
+  $blocks = array();
+
+  $blocks['index'] = array(
+    'info' => t('Index section'),
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function website_block_view($delta = '')
+{ 
+  $block['content'] = node_view(node_load(1));
+
+  return $block;
+}
+
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function website_preprocess_node(&$vars)
+{ 
+  if($vars['nid'] == 3)
+  {
+    $vars['services'] = _website_query_services();
+  }
+}
+
+
+function _website_ajax_node_view($nid)
+{
+  $n = node_load($nid);
+  $nv = node_view($n);
+
+  echo drupal_render($nv);
+}
+
+function _website_ajax_sendmail()
+{
+  if(empty($_POST))
+  {
+    echo '[error]';
+    drupal_exit();
+  }
+
+  $body = '';
+  foreach($_POST as $k => $v)
+  {
+  	$body .= "$k: $v\n";
+  }
+
+  $to = variable_get('site_mail');
+
+  $subject = 'Contacto de página ' . variable_get('site_name');
+
+  $my_module = 'website';
+  $my_mail_token = 'bar';
+  $host = $_SERVER['HTTP_HOST'];
+  $from = 'no_responder@' . $host;
+
+  $message = array(
+    'id' => $my_module . '_' . $my_mail_token,
+    'to' => $to,
+    'subject' => $subject,
+    'body' => array($body),
+    'headers' => array(
+      'From' => $host . '<' . $from . '>',
+      'Sender' => $from,
+      'Return-Path' => $from,
+    ),
+  );
+
+  $system = drupal_mail_system($my_module, $my_mail_token);
+  $message = $system->format($message);
+
+
+  if ($system->mail($message))
+  	echo "[OK]";
+  else
+  	echo "[ERROR]";
+}
+
+
+function website_form_system_site_information_settings_alter(&$form, $form_state, $form_id)
+{
+
+  $site_config = array(
+    'copyright' => array('name' => t('Copyright')),
+    'linkedin' => array('name' => 'LinkedIn'),
+    'pinterest' => array('name' => 'Pinterest'),
+    'instagram' => array('name' => 'Instagram'),
+  );
+  
+  foreach($site_config as $key => $val)
+  {
+    $form['site_information'][$key] = array(
+      '#type' => 'textfield',
+      '#title' => t($val['name']),
+      '#default_value' => variable_get($key, ''),
+    );
+    
+  }
+
+}
+
+function _website_query_services()
+{
+  $query = new EntityFieldQuery();
+  
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'service')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyOrderBy('created', 'ASC')
+    ;
+
+  $result = $query->execute();
+
+  $views = array();
+  if (isset($result['node']))
+  {
+    $items_nids = array_keys($result['node']);
+    $items = entity_load('node', $items_nids);
+    $views = node_view_multiple($items, 'full');
+    $views = $views['nodes'];
+    unset($views['#sorted']);
+  }
+  
+  return $views;
+}
+
+
+function _website_ajax_services($nid)
+{
+  $GLOBALS['active_nid'] = $nid;
+  $view = views_get_view('services');
+  $view->set_display('home');
+  $view->pre_execute();
+  $view->execute();
+  print $view->render();
+}

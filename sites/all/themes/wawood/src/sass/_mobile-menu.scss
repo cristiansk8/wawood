@@ -1,0 +1,77 @@
+NAV#main-nav-mobile
+{
+  width: 100%;
+	line-height: 1;
+  height: 40px;
+	
+	.menu_icon
+	{
+		background: none;
+		padding-left: 0;
+	}
+    
+  .logo
+  {
+    height: 60px;
+    width: auto;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9999;
+  }
+	
+	.nav-bar
+	{
+//    height: 40px;
+    padding-top:40px;
+		text-align: left;
+    background: $white;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    z-index: 100;
+	}
+
+	.btn-primary
+	{
+		color: $black;
+		padding: 10px;
+		background: transparent;
+		border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+	}
+
+	.menu--mobile--btn {
+//    border: 2px solid;
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.2em;
+    width: 25px;
+//    border-radius: 3px;
+    margin: 0 10px;
+		margin-top: -5px;
+
+		> DIV
+		{
+      border-bottom: 2px solid;
+      margin-top: 7px;
+    }
+  }
+  
+  UL
+  {
+		background: $white;
+//    color: $blue-1;
+		padding: 10px;
+		list-style: none;
+
+		LI
+		{
+      padding: 5px 10px;
+    }
+  }
+}

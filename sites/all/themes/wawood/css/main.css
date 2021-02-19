@@ -1,0 +1,1526 @@
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+.element-hidden {
+  display: none;
+}
+
+/* line 5, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+
+/* line 13, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+.element-invisible.element-focusable:active, .element-invisible.element-focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+}
+
+/* line 24, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+DIV.tabs UL.tabs {
+  padding: 0;
+  list-style: none;
+}
+
+/* line 29, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+DIV.tabs UL.tabs LI {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+/* line 34, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+DIV.tabs UL.tabs LI.active {
+  border-bottom: 1px solid;
+}
+
+/* line 37, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+DIV.tabs UL.tabs LI.active A {
+  color: #666;
+}
+
+/* line 44, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+DIV.tabs UL.tabs LI A {
+  color: #999;
+}
+
+/* line 47, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+DIV.tabs UL.tabs LI A:hover {
+  text-decoration: none;
+}
+
+/* line 56, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+#user-login {
+  margin: 40px 15px;
+}
+
+/* line 60, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+#user-login LABEL {
+  display: block;
+}
+
+/* line 65, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+#user-login .form-item {
+  margin-bottom: 20px;
+}
+
+/* line 69, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+#user-login .form-item INPUT {
+  width: 100%;
+}
+
+/* line 75, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_drupal.scss */
+#user-login .description {
+  font-size: .8em;
+  color: #999;
+}
+
+/* line 6, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+A {
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+
+/* line 11, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+A.clean, .clean-a A {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* line 17, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+A.no-decoration, .no-decoration-a A {
+  text-decoration: none;
+}
+
+/* line 21, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+A.no-decoration:hover, .no-decoration-a A:hover {
+  text-decoration: none;
+}
+
+/* line 29, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+UL.clean {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 35, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+UL.clean LI {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 44, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+UL.horizontal LI {
+  float: left;
+  padding: 0 5px;
+  display: inline-block;
+}
+
+/* line 53, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+.img-responsive IMG, .responsive-img IMG {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 59, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+IMG.fullwidth, .fullwidth-img IMG {
+  width: 100%;
+  height: auto;
+}
+
+/* line 65, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+.opaque {
+  opacity: 1 !important;
+}
+
+/* line 70, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+.table {
+  display: table;
+  width: 100%;
+}
+
+/* line 75, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+.table .td {
+  display: table-cell;
+}
+
+/* line 79, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+.table .td-middle {
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  /* line 86, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+  .text-xs-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 95, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+  .column-count-sm-2 {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
+
+/* line 103, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_framework.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_animations.scss */
+.entrance {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes moveLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+/* line 43, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_animations.scss */
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+
+/* line 48, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_animations.scss */
+.moveLeft {
+  -webkit-animation-name: moveLeft;
+          animation-name: moveLeft;
+}
+
+/* line 53, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_animations.scss */
+.animationDelay {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+/* line 4, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+#main-nav {
+  position: relative;
+  z-index: 20;
+  max-width: 1200px;
+  height: 70px;
+}
+
+/* line 11, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+#main-nav .menu-bar {
+  background: #fff;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 22, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+  #main-nav .logo IMG {
+    width: 300px;
+  }
+}
+
+/* line 29, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+UL#main-menu {
+  position: absolute;
+  bottom: 25px;
+  right: 80px;
+}
+
+/* line 35, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+UL#main-menu > LI {
+  position: relative;
+  margin: 0 10px;
+  padding: 0;
+}
+
+/* line 41, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+UL#main-menu > LI A {
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px 4px;
+}
+
+/* line 47, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+UL#main-menu > LI A.current {
+  color: #000;
+}
+
+/* line 52, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+UL#main-menu > LI A:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 63, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+#main-nav .fixed-menu {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  -webkit-animation: fixmenu .6s;
+          animation: fixmenu .6s;
+  padding-top: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 63, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+  #main-nav .fixed-menu {
+    max-width: 710px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 63, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+  #main-nav .fixed-menu {
+    max-width: 930px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 63, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_main-menu.scss */
+  #main-nav .fixed-menu {
+    max-width: 1040px;
+  }
+}
+
+@-webkit-keyframes fixmenu {
+  from {
+    margin-top: -100px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes fixmenu {
+  from {
+    margin-top: -100px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@font-face {
+  font-family: 'Chronicle';
+  src: url("../fonts/ChronicleTextG1-Roman-Pro.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chronicle';
+  src: url("../fonts/ChronicleTextG3-Semibd-Pro.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 37, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-normal {
+  font-family: "Chronicle", times, sans;
+  font-size: 14px;
+}
+
+/* line 43, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-raleway {
+  font-family: 'Raleway';
+}
+
+/* line 48, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-light {
+  font-weight: 200;
+}
+
+/* line 53, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-regular {
+  font-weight: normal;
+}
+
+/* line 58, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-bold {
+  font-weight: 500;
+}
+
+/* line 63, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-size-xs {
+  font-size: 0.8em;
+}
+
+/* line 68, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-size-s {
+  font-size: 0.9em;
+}
+
+/* line 73, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-size-n {
+  font-size: 14px;
+}
+
+/* line 78, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-size-m {
+  font-size: 1.2em;
+}
+
+/* line 83, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-size-l {
+  font-size: 1.5em;
+}
+
+@media (max-width: 767px) {
+  /* line 83, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+  .font-size-l {
+    font-size: 1.2em;
+  }
+}
+
+/* line 93, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-size-xl {
+  font-size: 1.8em;
+}
+
+@media (max-width: 767px) {
+  /* line 93, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+  .font-size-xl {
+    font-size: 1.2em;
+  }
+}
+
+/* line 103, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+.font-size-xxl {
+  font-size: 2.2em;
+}
+
+@media (max-width: 767px) {
+  /* line 103, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_fonts.scss */
+  .font-size-xxl {
+    font-size: 1.5em;
+  }
+}
+
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sprites.scss */
+.sprites .sprite {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 7, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sprites.scss */
+.sprites .audio, .sprite.audio {
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 14px;
+  background: url("../img/sprites.png") no-repeat 0px -28px;
+}
+
+/* line 9, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sprites.scss */
+.sprites .instagram, .sprite.instagram {
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 14px;
+  background: url("../img/sprites.png") no-repeat 0px 0px;
+}
+
+/* line 11, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sprites.scss */
+.sprites .linkedin, .sprite.linkedin {
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 14px;
+  background: url("../img/sprites.png") no-repeat -17px 0px;
+}
+
+/* line 13, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sprites.scss */
+.sprites .mail, .sprite.mail {
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 14px;
+  background: url("../img/sprites.png") no-repeat 0px -14px;
+}
+
+/* line 15, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sprites.scss */
+.sprites .pinterest, .sprite.pinterest {
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 14px;
+  background: url("../img/sprites.png") no-repeat -17px -14px;
+}
+
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile {
+  width: 100%;
+  line-height: 1;
+  height: 40px;
+}
+
+/* line 7, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile .menu_icon {
+  background: none;
+  padding-left: 0;
+}
+
+/* line 13, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile .logo {
+  height: 60px;
+  width: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* line 23, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile .nav-bar {
+  padding-top: 40px;
+  text-align: left;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  z-index: 100;
+}
+
+/* line 37, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile .btn-primary {
+  color: #000;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 48, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile .menu--mobile--btn {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.2em;
+  width: 25px;
+  margin: 0 10px;
+  margin-top: -5px;
+}
+
+/* line 58, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile .menu--mobile--btn > DIV {
+  border-bottom: 2px solid;
+  margin-top: 7px;
+}
+
+/* line 65, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile UL {
+  background: #fff;
+  padding: 10px;
+  list-style: none;
+}
+
+/* line 72, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_mobile-menu.scss */
+NAV#main-nav-mobile UL LI {
+  padding: 5px 10px;
+}
+
+/* line 29, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+BODY {
+  font-family: "Chronicle", times, sans;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* line 36, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+STRONG, B {
+  font-weight: 500;
+}
+
+/* line 41, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.color-blue-wawood {
+  color: #3221ff;
+}
+
+/* line 46, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.color-gray-3 {
+  color: #80858e;
+}
+
+/* line 51, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.color-gray-6 {
+  color: #b8b8b9;
+}
+
+/* line 56, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.color-gray-1 {
+  color: #444;
+}
+
+/* line 61, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.bg-gray-8 {
+  background-color: #f2f2f2;
+}
+
+/* line 66, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#block-locale-language {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+}
+
+/* line 72, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#block-locale-language UL {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 6px 0;
+  overflow: auto;
+}
+
+/* line 79, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#block-locale-language UL LI {
+  float: left;
+  padding: 0 1px;
+  margin: 0 1px;
+}
+
+/* line 85, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#block-locale-language UL LI A {
+  color: #b8b8b9;
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-right: 1px solid #b8b8b9;
+  line-height: 1;
+  padding-right: 3px;
+}
+
+/* line 95, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#block-locale-language UL LI A:hover {
+  color: #000;
+}
+
+/* line 100, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#block-locale-language UL LI A.active {
+  color: #000;
+}
+
+/* line 108, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#block-locale-language UL LI:last-child A {
+  border: none;
+}
+
+/* line 120, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#main-nav-mobile #block-locale-language {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 126, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+#main-nav-mobile #block-locale-language LI {
+  padding: 0;
+}
+
+/* line 133, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.headline {
+  letter-spacing: .15em;
+}
+
+/* line 138, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.social-net-container {
+  position: absolute;
+  right: 35px;
+}
+
+/* line 143, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.social-net-container .social-net {
+  position: fixed;
+  top: 120px;
+}
+
+/* line 148, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.social-net-container .social-net A {
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* line 138, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+  .social-net-container {
+    right: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 138, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+  .social-net-container {
+    right: 18px;
+  }
+  /* line 163, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+  .social-net-container .social-net {
+    top: 60px;
+  }
+}
+
+/* line 173, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.fa.angle-right, .fa.angle-left {
+  display: inline-block;
+  width: 22px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+/* line 181, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.fa.angle-right {
+  background-image: url(../img/angle-right.png);
+}
+
+/* line 186, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.fa.angle-left {
+  background-image: url(../img/angle-left.png);
+}
+
+/* line 195, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.carousel-control .fa {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+}
+
+/* line 202, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+.carousel-control.right, .carousel-control.left {
+  background: none;
+}
+
+/* line 211, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/main.scss */
+FOOTER .copyright {
+  margin-top: 40px;
+}
+
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_index.scss */
+#block-website-index {
+  position: relative;
+  padding-bottom: 67%;
+  margin-bottom: 35px;
+}
+
+/* line 7, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_index.scss */
+#block-website-index IMG {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+/* line 14, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_index.scss */
+#block-website-index .indicators {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  bottom: 60px;
+  text-align: center;
+}
+
+/* line 25, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_index.scss */
+#block-website-index .indicators LI {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* line 36, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_index.scss */
+#block-website-index .indicators LI.active {
+  background: #000;
+}
+
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+.section-divisor {
+  border-bottom: 2px solid;
+  width: 150px;
+  display: inline-block;
+}
+
+/* line 9, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION {
+  margin: 70px 0;
+  padding: 0 60px;
+  position: relative;
+}
+
+/* line 15, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION .title {
+  text-transform: uppercase;
+  color: #3221ff;
+  letter-spacing: .3em;
+}
+
+/* line 22, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION .body {
+  margin: 60px 0;
+}
+
+@media (max-width: 767px) {
+  /* line 22, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION .body {
+    margin: 15px 0;
+  }
+}
+
+/* line 32, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION .headline {
+  margin: 60px 0;
+}
+
+@media (max-width: 767px) {
+  /* line 32, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION .headline {
+    margin: 15px 0;
+  }
+}
+
+/* line 42, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION .subhead {
+  max-width: 600px;
+  display: inline-block;
+}
+
+/* line 48, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION .divisor {
+  margin: 60px 0 40px;
+  border-bottom: 2px solid;
+  width: 150px;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  /* line 9, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION {
+    padding: 10px;
+  }
+}
+
+/* line 64, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.the-studio .background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-color: #f2f2f2;
+  left: 0;
+  top: 130px;
+  height: 520px;
+}
+
+/* line 76, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.the-studio .title {
+  height: 85px;
+  max-width: 713px;
+  padding-top: 10px;
+  width: 100%;
+  display: inline-block;
+  background: white;
+}
+
+/* line 86, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.the-studio .body {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 93, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.the-studio .subhead {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 102, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services {
+  background-color: #f2f2f2;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 150px;
+}
+
+/* line 110, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services H2 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+/* line 117, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services .title {
+  height: 65px;
+  max-width: 713px;
+  width: 100%;
+  display: inline-block;
+  background: white;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+/* line 127, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services .body {
+  display: inline-block;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+/* line 134, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services .subhead {
+  max-width: 900px;
+  background: #fff;
+  margin-top: -100px;
+  position: relative;
+  top: 100px;
+}
+
+@media (min-width: 768px) {
+  /* line 134, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.services .subhead {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 134, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.services .subhead {
+    padding: 40px 10px;
+  }
+}
+
+/* line 154, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services .services-list {
+  margin-bottom: 60px;
+}
+
+/* line 158, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services .services-list .service {
+  margin-top: 15px;
+  margin-botom: 15px;
+  padding: 40px 30px;
+  background: #fff;
+}
+
+/* line 165, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.services .services-list .service P {
+  margin-bottom: 6px;
+}
+
+@media (min-width: 1200px) {
+  /* line 158, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.services .services-list .service {
+    min-height: 545px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 158, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.services .services-list .service {
+    min-height: 580px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 158, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.services .services-list .service {
+    padding: 40px 10px;
+    min-height: 580px;
+  }
+}
+
+/* line 191, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.about-us {
+  background-color: #f2f2f2;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* line 197, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.about-us .title {
+  margin: 30px;
+}
+
+/* line 202, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.about-us .subhead {
+  max-width: 900px;
+}
+
+/* line 207, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.about-us .image {
+  margin-top: 40px;
+}
+
+/* line 212, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.about-us .body {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 212, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.about-us .body {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 212, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.about-us .body {
+    margin-top: 20px;
+  }
+}
+
+/* line 227, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact {
+  padding: 0;
+}
+
+/* line 231, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .title {
+  margin: 30px;
+}
+
+/* line 236, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .image {
+  margin-right: 30px;
+}
+
+/* line 241, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .body {
+  margin: 30px 0;
+}
+
+/* line 246, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .subhead {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* line 253, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .headline {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 260, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.contact .bg-gray-8 {
+    margin: 10px 30px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 260, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.contact .bg-gray-8 {
+    padding: 20px 10px;
+  }
+}
+
+/* line 274, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .section-divisor {
+  border-color: #fff;
+}
+
+/* line 279, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .background {
+  top: 20px;
+  height: 520px;
+}
+
+/* line 286, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form {
+  background: url(../img/contact-bg.jpg) no-repeat center;
+  background-size: cover;
+  padding: 40px;
+}
+
+@media (max-width: 767px) {
+  /* line 286, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  SECTION.contact .form {
+    padding: 40px 10px;
+  }
+}
+
+/* line 297, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form FORM {
+  max-width: 500px;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 303, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form FORM INPUT[type=text] {
+  border: none;
+  appareance: none;
+  width: 80%;
+  width: calc(100% - 80px);
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+}
+
+/* line 315, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form FORM TEXTAREA {
+  display: block;
+  width: 100%;
+  border: none;
+  resize: none;
+  height: 200px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* line 327, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form FORM .actions {
+  margin-top: 10px;
+}
+
+/* line 332, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form FORM .submit {
+  appareance: none;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  -webkit-transition: all .4s;
+          transition: all .4s;
+}
+
+/* line 342, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form FORM .submit:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* line 350, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form FORM.submitted :invalid {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* line 357, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form LABEL {
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 15px 10px;
+  vertical-align: middle;
+}
+
+/* line 366, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+SECTION.contact .form LABEL .label {
+  display: inline-block;
+  width: 70px;
+}
+
+@media (max-width: 767px) {
+  /* line 376, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_sections.scss */
+  .service-image {
+    margin-left: -90px;
+    margin-right: -90px;
+  }
+}
+
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio {
+  position: relative;
+  margin: 60px 0;
+  padding-bottom: 200px;
+}
+
+/* line 7, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio .title {
+  margin-bottom: 60px;
+}
+
+/* line 12, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio .logo {
+  position: absolute;
+  bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  /* line 12, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio .logo {
+    left: 200px;
+  }
+}
+
+/* line 25, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio #work-window .work-node {
+  margin-bottom: 40px;
+}
+
+/* line 30, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio #work-window A.close {
+  color: inherit;
+  margin-bottom: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 37, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio #work-window A.close:hover {
+  text-decoration: none;
+}
+
+/* line 44, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio .work-item {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+}
+
+/* line 52, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio .work-item .mask {
+  position: absolute;
+  background: #000;
+  width: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .3s;
+          transition: all .3s;
+  top: 0;
+  pointer-events: none;
+}
+
+/* line 67, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio .work-item:hover .mask {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+/* line 75, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio .work-item .label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: white;
+}
+
+/* line 85, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+SECTION#portfolio .work-item IMG {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  /* line 99, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(2) {
+    -webkit-transform: translate(0, 40px);
+            transform: translate(0, 40px);
+  }
+  /* line 104, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(3) {
+    -webkit-transform: translate(40px, -40px);
+            transform: translate(40px, -40px);
+  }
+  /* line 109, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(4) {
+    -webkit-transform: translate(-150px, 180px);
+            transform: translate(-150px, 180px);
+  }
+  /* line 114, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(5) {
+    -webkit-transform: translate(750px, -250px);
+            transform: translate(750px, -250px);
+  }
+  /* line 119, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(6) {
+    -webkit-transform: translate(-90px, 40px);
+            transform: translate(-90px, 40px);
+  }
+  /* line 124, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(7) {
+    -webkit-transform: translate(-20px, 140px);
+            transform: translate(-20px, 140px);
+  }
+  /* line 129, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(8) {
+    -webkit-transform: translate(175px, 40px);
+            transform: translate(175px, 40px);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 138, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(2) {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+  }
+  /* line 143, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(3) {
+    -webkit-transform: translate(200px, -10px);
+            transform: translate(200px, -10px);
+  }
+  /* line 148, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(4) {
+    -webkit-transform: translate(190px, 0);
+            transform: translate(190px, 0);
+  }
+  /* line 153, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(5) {
+    -webkit-transform: translate(-400px, 20px);
+            transform: translate(-400px, 20px);
+  }
+  /* line 158, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(6) {
+    -webkit-transform: translate(90px, 0);
+            transform: translate(90px, 0);
+  }
+  /* line 163, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(7) {
+    -webkit-transform: translate(90px, 0);
+            transform: translate(90px, 0);
+  }
+  /* line 168, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work:nth-child(8) {
+    -webkit-transform: translate(180px, 40px);
+            transform: translate(180px, 40px);
+  }
+}
+
+@media (max-width: 991px) {
+  /* line 93, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated {
+    text-align: center;
+  }
+  /* line 178, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+  SECTION#portfolio.work-animated .work {
+    margin: 5px;
+  }
+}
+
+/* line 189, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+.modal-content .work {
+  margin: 0 60px;
+}
+
+/* line 193, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_portfolio.scss */
+.modal-content .work .body {
+  margin: 70px 0;
+}
+
+/* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.container {
+  padding: 40px 20px;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  /* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+  .container {
+    padding: 60px 80px 40px;
+    width: 1200px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 1, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+  .container {
+    padding: 15px;
+    padding-right: 20px;
+  }
+}
+
+/* line 24, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-content {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+/* line 32, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-header {
+  min-height: 0;
+}
+
+/* line 37, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-body {
+  padding: 0;
+}
+
+/* line 42, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-dialog {
+  width: calc(100% - 30px);
+  max-width: 900px;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+/* line 50, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-header {
+  border: none;
+  padding: 0;
+}
+
+/* line 55, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-header .close {
+  position: absolute;
+  padding: 0;
+  right: 30px;
+  top: 30px;
+  border: 1px solid;
+  z-index: 10;
+  font-size: 25px;
+  font-weight: bold;
+  color: #80858e;
+  background: none;
+  line-height: 1.3em;
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+
+/* line 74, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-header .close:hover {
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  /* line 55, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+  .modal .modal-header .close {
+    font-size: 15px;
+  }
+}
+
+/* line 86, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal .modal-caption {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  padding: 10px 30px;
+}
+
+@media (max-width: 767px) {
+  /* line 86, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+  .modal .modal-caption {
+    position: static;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* line 105, /Users/iiandresii/Sites/wawood/sites/all/themes/wawood/src/sass/_override.scss */
+.modal-backdrop {
+  background: #fff;
+}
