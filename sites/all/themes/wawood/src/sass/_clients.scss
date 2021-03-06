@@ -1,5 +1,6 @@
 #block-views-our-clients-block {
   text-align: center;
+  @include lower-border($border-width:200px,$pd-bottom:30px,$m-bottom:20px);
 
   > h2 {
     @include title-section;
