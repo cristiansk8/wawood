@@ -1,12 +1,8 @@
 #block-views-our-clients-block {
   text-align: center;
 
-  h2 {
-    font-size: $font-size-m;
-    font-family: Raleway;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $black;
+  > h2 {
+    @include title-section;
   }
 }
 
