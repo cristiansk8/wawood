@@ -1,11 +1,19 @@
+//about-us
 #block-views-about-us-block {
   text-align: center;
+  @include lower-border($border-width: 115px, $pd-bottom: 50px, $m-bottom: 0);
 
   > h2 {
     @include title-section;
   }
 
   .view-header {
+    @include lower-border($border-width: 130px, $pd-bottom: 0, $m-bottom: 50px);
+
+    @media screen and (max-width: $screen-md) {
+      padding-bottom: 25px;
+    }
+
     h2 {
       padding: 15px 0;
       @include title-brand(
@@ -13,6 +21,10 @@
         $f-family: Chronicle,
         $letter-space: 6px
       );
+
+      @media screen and (max-width: $screen-md) {
+        font-size: 20px;
+      }
     }
 
     p {
@@ -20,40 +32,141 @@
       font-size: $font-size-l;
       font-family: Raleway;
       line-height: 2;
+
+      @media screen and (max-width: $screen-md) {
+        padding: 12px 0;
+        font-size: 18px;
+      }
     }
   }
 
   .view-content {
+    .views-row {
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $screen-md) {
+        margin-bottom: 15px;
+      }
+    }
+
     .field-content {
       display: flex;
+
+      @media screen and (max-width: $screen-md) {
+        flex-direction: column;
+      }
     }
 
     .main-img {
-      padding-top: 50px;
+      padding-top: 8%;
+
+      @media screen and (max-width: $screen-md) {
+        margin-bottom: 25px;
+        padding-top: 20px;
+      }
     }
 
-    .main-img,
+    .main-img {
+      flex: 1 1 45%;
+    }
+
     .body {
-      flex: 1 1 50%;
+      flex: 1 1 55%;
     }
 
     .body {
       text-align: left;
 
       p {
+        margin-bottom: 25px;
+
+        @media screen and (max-width: $screen-md) {
+          margin-bottom: 10px;
+        }
+
         &:nth-child(1) {
           font-size: $font-size-m;
           font-family: Chronicle;
           font-weight: bold;
           text-transform: uppercase;
           color: $black;
+          letter-spacing: 3px;
+
+          @media screen and (max-width: $screen-md) {
+            padding-left: 0;
+          }
         }
 
         &:nth-child(2) {
+          padding-left: 10px;
+          font-size: $font-size-m;
+          color: $gray-3;
+
+          @media screen and (max-width: $screen-md) {
+            padding-left: 0;
+          }
         }
 
-        &:nth-child(3) {
+        &:nth-child(n + 3) {
+          padding-left: 10px;
+          font-family: Raleway;
+          line-height: 2;
+          color: $gray-2;
+
+          @media screen and (max-width: $screen-md) {
+            padding-left: 0;
+          }
         }
+      }
+    }
+  }
+}
+
+//collaborator
+#block-views-about-us-block-1 {
+  text-align: center;
+
+  > h2 {
+    padding: 25px 0 40px;
+    @include title-section;
+  }
+
+  .views-row {
+    margin-bottom: 55px;
+  }
+
+  .field-content {
+    text-align: left;
+
+    p {
+      &:nth-child(1) {
+        margin-bottom: 20px;
+        font-size: $font-size-m;
+        font-family: Chronicle;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $black;
+        letter-spacing: 3px;
+
+        @media screen and (max-width: $screen-md) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 20px;
+        font-size: $font-size-m;
+        color: $gray-3;
+
+        @media screen and (max-width: $screen-md) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:nth-child(n + 3) {
+        font-family: Raleway;
+        line-height: 2;
+        color: $gray-2;
       }
     }
   }
