@@ -419,7 +419,7 @@ B {
   @media (min-width: 768px) and (max-width: 1199px) {
     .social-net-container {
       right: 5px; } }
-  @media (max-width: 767px) {
+  @media (max-width: -1) {
     .social-net-container {
       right: 18px; }
       .social-net-container .social-net {
@@ -963,7 +963,20 @@ SECTION#portfolio {
     object-fit: cover; }
 
 #block-views-our-clients-block {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  position: relative; }
+  #block-views-our-clients-block::after {
+    content: "";
+    width: 200px;
+    height: 2.2px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000; }
   #block-views-our-clients-block > h2 {
     font-size: 14px;
     font-family: Raleway;
@@ -983,37 +996,147 @@ SECTION#portfolio {
   align-items: center; }
 
 #block-views-about-us-block {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+  position: relative; }
+  #block-views-about-us-block::after {
+    content: "";
+    width: 115px;
+    height: 2.2px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000; }
   #block-views-about-us-block > h2 {
     font-size: 14px;
     font-family: Raleway;
     font-weight: bold;
     text-transform: uppercase;
     color: #000; }
-  #block-views-about-us-block .view-header h2 {
-    padding: 15px 0;
-    font-size: 4.5em;
-    font-family: "";
-    text-transform: uppercase;
-    color: #3221ff;
-    letter-spacing: 6px; }
-  #block-views-about-us-block .view-header p {
-    padding: 40px 0;
-    font-size: 1.5em;
-    font-family: Raleway;
-    line-height: 2; }
+  #block-views-about-us-block .view-header {
+    margin-bottom: 50px;
+    padding-bottom: 0;
+    position: relative; }
+    #block-views-about-us-block .view-header::after {
+      content: "";
+      width: 130px;
+      height: 2.2px;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000; }
+    @media screen and (max-width: 992px) {
+      #block-views-about-us-block .view-header {
+        padding-bottom: 25px; } }
+    #block-views-about-us-block .view-header h2 {
+      padding: 15px 0;
+      font-size: 4.5em;
+      font-family: "";
+      text-transform: uppercase;
+      color: #3221ff;
+      letter-spacing: 6px; }
+      @media screen and (max-width: 992px) {
+        #block-views-about-us-block .view-header h2 {
+          font-size: 20px; } }
+    #block-views-about-us-block .view-header p {
+      padding: 40px 0;
+      font-size: 1.5em;
+      font-family: Raleway;
+      line-height: 2; }
+      @media screen and (max-width: 992px) {
+        #block-views-about-us-block .view-header p {
+          padding: 12px 0;
+          font-size: 18px; } }
+  #block-views-about-us-block .view-content .views-row {
+    margin-bottom: 40px; }
+    @media screen and (max-width: 992px) {
+      #block-views-about-us-block .view-content .views-row {
+        margin-bottom: 15px; } }
   #block-views-about-us-block .view-content .field-content {
     display: flex; }
+    @media screen and (max-width: 992px) {
+      #block-views-about-us-block .view-content .field-content {
+        flex-direction: column; } }
   #block-views-about-us-block .view-content .main-img {
-    padding-top: 50px; }
-  #block-views-about-us-block .view-content .main-img,
+    padding-top: 8%; }
+    @media screen and (max-width: 992px) {
+      #block-views-about-us-block .view-content .main-img {
+        margin-bottom: 25px;
+        padding-top: 20px; } }
+  #block-views-about-us-block .view-content .main-img {
+    flex: 1 1 45%; }
   #block-views-about-us-block .view-content .body {
-    flex: 1 1 50%; }
+    flex: 1 1 55%; }
   #block-views-about-us-block .view-content .body {
     text-align: left; }
-    #block-views-about-us-block .view-content .body p:nth-child(1) {
+    #block-views-about-us-block .view-content .body p {
+      margin-bottom: 25px; }
+      @media screen and (max-width: 992px) {
+        #block-views-about-us-block .view-content .body p {
+          margin-bottom: 10px; } }
+      #block-views-about-us-block .view-content .body p:nth-child(1) {
+        font-size: 1.2em;
+        font-family: Chronicle;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #000;
+        letter-spacing: 3px; }
+        @media screen and (max-width: 992px) {
+          #block-views-about-us-block .view-content .body p:nth-child(1) {
+            padding-left: 0; } }
+      #block-views-about-us-block .view-content .body p:nth-child(2) {
+        padding-left: 10px;
+        font-size: 1.2em;
+        color: #80858e; }
+        @media screen and (max-width: 992px) {
+          #block-views-about-us-block .view-content .body p:nth-child(2) {
+            padding-left: 0; } }
+      #block-views-about-us-block .view-content .body p:nth-child(n + 3) {
+        padding-left: 10px;
+        font-family: Raleway;
+        line-height: 2;
+        color: #666; }
+        @media screen and (max-width: 992px) {
+          #block-views-about-us-block .view-content .body p:nth-child(n + 3) {
+            padding-left: 0; } }
+
+#block-views-about-us-block-1 {
+  text-align: center; }
+  #block-views-about-us-block-1 > h2 {
+    padding: 25px 0 40px;
+    font-size: 14px;
+    font-family: Raleway;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000; }
+  #block-views-about-us-block-1 .views-row {
+    margin-bottom: 55px; }
+  #block-views-about-us-block-1 .field-content {
+    text-align: left; }
+    #block-views-about-us-block-1 .field-content p:nth-child(1) {
+      margin-bottom: 20px;
       font-size: 1.2em;
       font-family: Chronicle;
       font-weight: bold;
       text-transform: uppercase;
-      color: #000; }
+      color: #000;
+      letter-spacing: 3px; }
+      @media screen and (max-width: 992px) {
+        #block-views-about-us-block-1 .field-content p:nth-child(1) {
+          margin-bottom: 10px; } }
+    #block-views-about-us-block-1 .field-content p:nth-child(2) {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      color: #80858e; }
+      @media screen and (max-width: 992px) {
+        #block-views-about-us-block-1 .field-content p:nth-child(2) {
+          margin-bottom: 10px; } }
+    #block-views-about-us-block-1 .field-content p:nth-child(n + 3) {
+      font-family: Raleway;
+      line-height: 2;
+      color: #666; }
