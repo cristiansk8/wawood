@@ -1,6 +1,6 @@
 $max-page-width: 1200px;
-$margin-top-block: 40px; 
-$font-normal: 'Chronicle', times, sans;
+$margin-top-block: 40px;
+$font-normal: "Chronicle", times, sans;
 
 $gray-1: #444;
 $gray-2: #666;
@@ -14,210 +14,195 @@ $white: #fff;
 $black: #000;
 $blue-wawood: rgb(50, 33, 255);
 
-@import 'drupal';
-@import 'framework';
-@import 'animations';
-@import 'main-menu';
-@import 'fonts';
-@import 'sprites';
-@import 'mobile-menu';
-
-HTML
-{
-	
+@mixin title-section {
+  font-size: $font-size-n;
+  font-family: Raleway;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $black;
 }
 
-BODY
-{
-	font-family: $font-normal;
-	font-size: 14px;
-	line-height: 1.5;
+@mixin title-brand($f-size: 1em, $f-family: "arial", $color: $blue-wawood,$letter-space: 1px) {
+  font-size: $f-size;
+  font-family: "";
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: $letter-space;
 }
 
-STRONG, B
-{
-	font-weight: 500;
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
 }
 
-.color-blue-wawood
-{
-	color: $blue-wawood;
+@import "drupal";
+@import "framework";
+@import "animations";
+@import "main-menu";
+@import "fonts";
+@import "sprites";
+@import "mobile-menu";
+
+HTML {
 }
 
-.color-gray-3
-{
-	color: $gray-3;
+BODY {
+  font-family: $font-normal;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.color-gray-6
-{
-	color: $gray-6;
+STRONG,
+B {
+  font-weight: 500;
 }
 
-.color-gray-1
-{
-	color: $gray-1;
+.color-blue-wawood {
+  color: $blue-wawood;
 }
 
-.bg-gray-8
-{
-	background-color: $gray-8;
+.color-gray-3 {
+  color: $gray-3;
 }
 
-#block-locale-language
-{
-	position: absolute;
-	bottom: 25px;
-	right: 0;
-
-	UL
-	{
-		list-style: none;
-		padding: 0;
-		margin: 0 0 6px 0;
-		overflow: auto;
-		
-		LI
-		{
-			float: left;
-			padding: 0 1px;
-			margin: 0 1px;
-
-			A
-			{
-				color: $gray-6;
-				display: block;
-				text-decoration: none;
-				text-transform: capitalize;
-				border-right: 1px solid $gray-6;
-				line-height: 1;
-				padding-right: 3px;
-				
-				&:hover
-				{
-					color: $black;
-				}
-				
-				&.active
-				{
-					color: $black;
-				}
-			}
-
-			&:last-child
-			{
-				A
-				{
-					border: none;
-				}
-			}
-
-		}
-	}
+.color-gray-6 {
+  color: $gray-6;
 }
 
-#main-nav-mobile
-{
-	#block-locale-language
-	{
-		position: absolute;
-		top: 0;
-		right: 0;
-		
-		LI
-		{
-			padding: 0;
-		}
-	}
+.color-gray-1 {
+  color: $gray-1;
 }
 
-.headline
-{
-	letter-spacing: .15em;
+.bg-gray-8 {
+  background-color: $gray-8;
 }
 
-.social-net-container
-{
-	position: absolute;
-	right: 35px;
+#block-locale-language {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
 
-	.social-net
-	{
-		position: fixed;
-		top: 120px;
-		
-		A
-		{
-			display: block;
-			margin-bottom: 10px;
-		}
-	}
-	
-	@media (min-width:$screen-sm) AND (max-width:$screen-lg - 1)
-	{
-		right: 5px;
-	}
+  UL {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 6px 0;
+    overflow: auto;
 
-	@media (max-width:$screen-sm - 1)
-	{
-		right: 18px;
-		.social-net
-		{
-			top: 60px;
-		}
-	}
+    LI {
+      float: left;
+      padding: 0 1px;
+      margin: 0 1px;
 
+      A {
+        color: $gray-6;
+        display: block;
+        text-decoration: none;
+        text-transform: capitalize;
+        border-right: 1px solid $gray-6;
+        line-height: 1;
+        padding-right: 3px;
+
+        &:hover {
+          color: $black;
+        }
+
+        &.active {
+          color: $black;
+        }
+      }
+
+      &:last-child {
+        A {
+          border: none;
+        }
+      }
+    }
+  }
 }
 
-.fa
-{
-	&.angle-right, &.angle-left
-	{
-		display: inline-block;
-		width: 22px;
-		height: 40px;
-		vertical-align: middle;
-	}
-	
-	&.angle-right
-	{
-		background-image: url(../img/angle-right.png)
-	}
+#main-nav-mobile {
+  #block-locale-language {
+    position: absolute;
+    top: 0;
+    right: 0;
 
-	&.angle-left
-	{
-		background-image: url(../img/angle-left.png)
-	}
+    LI {
+      padding: 0;
+    }
+  }
 }
 
-.carousel-control
-{
-	
-	.fa
-	{
-		position: absolute;
-		top: 50%;
-		margin-top: -20px;
-	}
-
-	&.right, &.left
-	{
-		background: none;
-	}
+.headline {
+  letter-spacing: 0.15em;
 }
 
+.social-net-container {
+  position: absolute;
+  right: 35px;
 
-FOOTER
-{
-	.copyright
-	{
-		margin-top: 40px;
-	}
+  .social-net {
+    position: fixed;
+    top: 120px;
+
+    A {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (min-width: $screen-sm) AND (max-width: $screen-lg - 1) {
+    right: 5px;
+  }
+
+  @media (max-width: $screen-sm - 1) {
+    right: 18px;
+    .social-net {
+      top: 60px;
+    }
+  }
 }
 
-@import 'index';
-@import 'sections';
-@import 'portfolio';
-@import 'override';
-@import 'banner';
-@import 'clients';
+.fa {
+  &.angle-right,
+  &.angle-left {
+    display: inline-block;
+    width: 22px;
+    height: 40px;
+    vertical-align: middle;
+  }
+
+  &.angle-right {
+    background-image: url(../img/angle-right.png);
+  }
+
+  &.angle-left {
+    background-image: url(../img/angle-left.png);
+  }
+}
+
+.carousel-control {
+  .fa {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+  }
+
+  &.right,
+  &.left {
+    background: none;
+  }
+}
+
+FOOTER {
+  .copyright {
+    margin-top: 40px;
+  }
+}
+
+@import "index";
+@import "sections";
+@import "portfolio";
+@import "override";
+@import "banner";
+@import "clients";
+@import "about-us";
