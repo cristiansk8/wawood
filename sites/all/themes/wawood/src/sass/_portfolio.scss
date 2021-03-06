@@ -1,198 +1,318 @@
-SECTION#portfolio
-{
-	position: relative;
-	margin: 60px 0;
-	padding-bottom: 200px;
-	
-	.title
-	{
-		margin-bottom: 60px;
-	}
-	
-	.logo
-	{
-		position: absolute;
-		bottom: 0px;
-		
-		@media (min-width:$screen-sm)
-		{
-			left: 200px;
-		}
-	}
-	
-	#work-window
-	{
-		.work-node
-		{
-			margin-bottom: 40px;
-		}
-			
-		A.close
-		{
-			color: inherit;
-			margin-bottom: 40px;
-			display: inline-block;
-			cursor: pointer;
-			
-			&:hover
-			{
-				text-decoration: none;
-			}
-		}
-	}
-	
-	.work-item
-	{
-		overflow: hidden;
-		position: relative;
-		display: inline-block;
-		cursor: pointer;
-		transition: all .5s;
+SECTION#portfolio {
+  position: relative;
+  margin: 60px 0;
+  padding-bottom: 200px;
 
-		.mask
-		{
-			position: absolute;
-			background: $black;
-			width: 100%;
-//			transform: translateY(100%);
-			transform: scale(0);
-			opacity: 0;
-			transition: all .3s;
-			top: 0;
-			pointer-events: none;
-		}
-			
-		&:hover
-		{
-			.mask
-			{
-//				transform: translateY(0);
-				transform: scale(1);
-				opacity: 1;
-			}
-		}
+  .title {
+    margin-bottom: 60px;
+  }
 
-		.label
-		{
-			position: absolute;
-			width: 100%;
-			text-align: center;
-			top: 50%;
-			transform: translateY(-50%);
-			color: white;
-		}
-    
-    IMG
-    {
+  .logo {
+    position: absolute;
+    bottom: 0px;
+
+    @media (min-width: $screen-sm) {
+      left: 200px;
+    }
+  }
+
+  #work-window {
+    .work-node {
+      margin-bottom: 40px;
+    }
+
+    A.close {
+      color: inherit;
+      margin-bottom: 40px;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .work-item {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    .mask {
+      position: absolute;
+      background: $white;
+      border: 1.5px solid $blue-wawood;
+      width: 100%;
+      //			transform: translateY(100%);
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.3s;
+      top: 0;
+      pointer-events: none;
+    }
+
+    &:hover {
+      .mask {
+        //				transform: translateY(0);
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $blue-wawood;
+    }
+
+    IMG {
       max-width: 100%;
       height: auto;
     }
-		
-	}
+  }
 
-	&.work-animated 
-	{
-		.work
-		{
-			@media (min-width:$screen-lg)
-			{
-				&:nth-child(2)
-				{
-					transform: translate(0, 40px);
-				}
+  &.work-animated {
+    .work {
+      @media (min-width: $screen-lg) {
+        &:nth-child(2) {
+          transform: translate(0, 40px);
+        }
 
-				&:nth-child(3)
-				{
-					transform: translate(40px, -40px);
-				}
+        &:nth-child(3) {
+          transform: translate(40px, -40px);
+        }
 
-				&:nth-child(4)
-				{
-					transform: translate(-150px, 180px);
-				}
+        &:nth-child(4) {
+          transform: translate(-150px, 180px);
+        }
 
-				&:nth-child(5)
-				{
-					transform: translate(750px, -250px);
-				}
+        &:nth-child(5) {
+          transform: translate(750px, -250px);
+        }
 
-				&:nth-child(6)
-				{
-					transform: translate(-90px, 40px);
-				}
+        &:nth-child(6) {
+          transform: translate(-90px, 40px);
+        }
 
-				&:nth-child(7)
-				{
-					transform: translate(-20px, 140px);
-				}
+        &:nth-child(7) {
+          transform: translate(-20px, 140px);
+        }
 
-				&:nth-child(8)
-				{
-					transform: translate(175px, 40px);
-				}
+        &:nth-child(8) {
+          transform: translate(175px, 40px);
+        }
+      }
 
-			}
+      @media (min-width: $screen-md) AND (max-width: $screen-lg - 1) {
+        &:nth-child(2) {
+          transform: translate(100px, 0);
+        }
 
-			@media (min-width:$screen-md) AND (max-width:$screen-lg - 1)
-			{
-				&:nth-child(2)
-				{
-					transform: translate(100px, 0);
-				}
+        &:nth-child(3) {
+          transform: translate(200px, -10px);
+        }
 
-				&:nth-child(3)
-				{
-					transform: translate(200px, -10px);
-				}
+        &:nth-child(4) {
+          transform: translate(190px, 0);
+        }
 
-				&:nth-child(4)
-				{
-					transform: translate(190px, 0);
-				}
+        &:nth-child(5) {
+          transform: translate(-400px, 20px);
+        }
 
-				&:nth-child(5)
-				{
-					transform: translate(-400px, 20px);
-				}
+        &:nth-child(6) {
+          transform: translate(90px, 0);
+        }
 
-				&:nth-child(6)
-				{
-					transform: translate(90px, 0);
-				}
+        &:nth-child(7) {
+          transform: translate(90px, 0);
+        }
 
-				&:nth-child(7)
-				{
-					transform: translate(90px, 0);
-				}
+        &:nth-child(8) {
+          transform: translate(180px, 40px);
+        }
+      }
+    }
 
-				&:nth-child(8)
-				{
-					transform: translate(180px, 40px);
-				}
-			}
-		}
-
-		@media (max-width:$screen-md - 1)
-		{
-			text-align: center;
-			.work
-			{
-				margin: 5px;
-			}
-		}
-	}
-
+    @media (max-width: $screen-md - 1) {
+      text-align: center;
+      .work {
+        margin: 5px;
+      }
+    }
+  }
 }
 
-.modal-content
-{
-	.work
-	{
-		margin: 0 60px;
+.modal-content {
+  .work {
+    margin: 0 60px;
 
-		.body
-		{
-			margin: 70px 0;
-		}
-	}
+    .body {
+      margin: 70px 0;
+    }
+  }
+}
+SECTION#portfolio {
+  position: relative;
+  margin: 60px 0;
+  padding-bottom: 200px;
+
+  .title {
+    margin-bottom: 60px;
+  }
+
+  .logo {
+    position: absolute;
+    bottom: 0px;
+
+    @media (min-width: $screen-sm) {
+      left: 200px;
+    }
+  }
+
+  #work-window {
+    .work-node {
+      margin-bottom: 40px;
+    }
+
+    A.close {
+      color: inherit;
+      margin-bottom: 40px;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .work-item {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    .mask {
+      position: absolute;
+      background: $white;
+      border: 1.5px solid $blue-wawood;
+      width: 100%;
+      //			transform: translateY(100%);
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.3s;
+      top: 0;
+      pointer-events: none;
+    }
+
+    &:hover {
+      .mask {
+        //				transform: translateY(0);
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $blue-wawood;
+    }
+
+    IMG {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &.work-animated {
+    .work {
+      @media (min-width: $screen-lg) {
+        &:nth-child(2) {
+          transform: translate(0, 40px);
+        }
+
+        &:nth-child(3) {
+          transform: translate(40px, -40px);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-150px, 180px);
+        }
+
+        &:nth-child(5) {
+          transform: translate(750px, -250px);
+        }
+
+        &:nth-child(6) {
+          transform: translate(-90px, 40px);
+        }
+
+        &:nth-child(7) {
+          transform: translate(-20px, 140px);
+        }
+
+        &:nth-child(8) {
+          transform: translate(175px, 40px);
+        }
+      }
+
+      @media (min-width: $screen-md) AND (max-width: $screen-lg - 1) {
+        &:nth-child(2) {
+          transform: translate(100px, 0);
+        }
+
+        &:nth-child(3) {
+          transform: translate(200px, -10px);
+        }
+
+        &:nth-child(4) {
+          transform: translate(190px, 0);
+        }
+
+        &:nth-child(5) {
+          transform: translate(-400px, 20px);
+        }
+
+        &:nth-child(6) {
+          transform: translate(90px, 0);
+        }
+
+        &:nth-child(7) {
+          transform: translate(90px, 0);
+        }
+
+        &:nth-child(8) {
+          transform: translate(180px, 40px);
+        }
+      }
+    }
+
+    @media (max-width: $screen-md - 1) {
+      text-align: center;
+      .work {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.modal-content {
+  .work {
+    margin: 0 60px;
+
+    .body {
+      margin: 70px 0;
+    }
+  }
 }
