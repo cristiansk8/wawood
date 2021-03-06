@@ -1,0 +1,26 @@
+#block-views-our-clients-block {
+  text-align: center;
+
+  h2 {
+    font-size: $font-size-m;
+    font-family: Raleway;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $black;
+  }
+}
+
+.view-our-clients {
+  .view-content {
+    margin-top: $margin-top-block;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 100px;
+  }
+
+  .views-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

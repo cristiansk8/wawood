@@ -871,3 +871,23 @@ SECTION#portfolio {
     max-width: 100%;
     height: 100%;
     object-fit: cover; }
+
+#block-views-our-clients-block {
+  text-align: center; }
+  #block-views-our-clients-block h2 {
+    font-size: 1.2em;
+    font-family: Raleway;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000; }
+
+.view-our-clients .view-content {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 100px; }
+
+.view-our-clients .views-row {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
