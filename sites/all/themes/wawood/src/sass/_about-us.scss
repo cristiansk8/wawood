@@ -1,0 +1,60 @@
+#block-views-about-us-block {
+  text-align: center;
+
+  > h2 {
+    @include title-section;
+  }
+
+  .view-header {
+    h2 {
+      padding: 15px 0;
+      @include title-brand(
+        $f-size: 4.5em,
+        $f-family: Chronicle,
+        $letter-space: 6px
+      );
+    }
+
+    p {
+      padding: 40px 0;
+      font-size: $font-size-l;
+      font-family: Raleway;
+      line-height: 2;
+    }
+  }
+
+  .view-content {
+    .field-content {
+      display: flex;
+    }
+
+    .main-img {
+      padding-top: 50px;
+    }
+
+    .main-img,
+    .body {
+      flex: 1 1 50%;
+    }
+
+    .body {
+      text-align: left;
+
+      p {
+        &:nth-child(1) {
+          font-size: $font-size-m;
+          font-family: Chronicle;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: $black;
+        }
+
+        &:nth-child(2) {
+        }
+
+        &:nth-child(3) {
+        }
+      }
+    }
+  }
+}
