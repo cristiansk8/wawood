@@ -22,7 +22,12 @@ $blue-wawood: rgb(50, 33, 255);
   color: $black;
 }
 
-@mixin title-brand($f-size: 1em, $f-family: "arial", $color: $blue-wawood,$letter-space: 1px) {
+@mixin title-brand(
+  $f-size: 1em,
+  $f-family: "arial",
+  $color: $blue-wawood,
+  $letter-space: 1px
+) {
   font-size: $f-size;
   font-family: "";
   text-transform: uppercase;
@@ -33,6 +38,24 @@ $blue-wawood: rgb(50, 33, 255);
 @mixin font-size($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
+}
+
+@mixin lower-border($border-width:180px,$pd-bottom:20px,$m-bottom:20px) {
+  margin-bottom: $m-bottom;
+  padding-bottom: $pd-bottom;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: $border-width;
+    height: 2.2px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+  }
 }
 
 @import "drupal";
@@ -154,7 +177,7 @@ B {
     right: 5px;
   }
 
-  @media (max-width: $screen-sm - 1) {
+  @media (max-width: - 1) {
     right: 18px;
     .social-net {
       top: 60px;
