@@ -1068,7 +1068,10 @@ SECTION#portfolio {
     @media screen and (max-width: 992px) {
       #block-views-about-us-block .view-content .main-img {
         margin-bottom: 25px;
-        padding-top: 20px; } }
+        padding-top: 20px; }
+        #block-views-about-us-block .view-content .main-img img {
+          max-width: 100%;
+          height: auto; } }
   #block-views-about-us-block .view-content .main-img {
     flex: 1 1 45%; }
   #block-views-about-us-block .view-content .body {
