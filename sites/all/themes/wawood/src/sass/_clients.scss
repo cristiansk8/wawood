@@ -1,6 +1,10 @@
 #block-views-our-clients-block {
   text-align: center;
-  @include lower-border($border-width:200px,$pd-bottom:30px,$m-bottom:20px);
+  @include lower-border(
+    $border-width: 200px,
+    $pd-bottom: 30px,
+    $m-bottom: 20px
+  );
 
   > h2 {
     @include title-section;
@@ -13,6 +17,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 100px;
+    grid-gap: 10px 0;
+
+    @media screen and (max-width: $screen-md) {
+      grid-gap: 20px 0;
+    }
   }
 
   .views-row {
