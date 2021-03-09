@@ -316,3 +316,78 @@ SECTION#portfolio {
     }
   }
 }
+
+//page portafolio
+.briefcase {
+  &__tabs {
+    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 300px;
+
+    .tab {
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: $gray-8;
+      cursor: pointer;
+
+      &:hover {
+        .briefcase__image {
+          opacity: 1;
+        }
+
+        .briefcase__title {
+          h2 {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+  }
+
+  &__title {
+    h2 {
+      font-size: $font-size-xl;
+      font-family: Raleway;
+      font-weight: bold;
+      transition: opacity 0.4s linear;
+    }
+  }
+
+  &__content {
+    &-title {
+      margin-bottom: 20px;
+      font-family: Raleway;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &-body {
+      p {
+        font-size: $font-size-l;
+        font-family: Raleway;
+        text-align: center;
+        line-height: 1.5;
+      }
+    }
+
+    &-image {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+}
