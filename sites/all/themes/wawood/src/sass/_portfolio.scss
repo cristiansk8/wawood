@@ -325,6 +325,17 @@ SECTION#portfolio {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 300px;
 
+    @media screen and (max-width: $screen-md) {
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+      scroll-snap-type: x mandatory;
+      white-space: nowrap;
+      overflow: auto;
+    }
+
     .tab {
       margin-right: 15px;
       display: flex;
@@ -333,6 +344,12 @@ SECTION#portfolio {
       position: relative;
       background-color: $gray-8;
       cursor: pointer;
+
+      @media screen and (max-width: $screen-md) {
+        min-width: 300px;
+        min-height: 300px;
+        scroll-snap-align: center;
+      }
 
       &.active {
         .briefcase__image {
@@ -378,24 +395,32 @@ SECTION#portfolio {
       font-weight: bold;
       transition: opacity 0.4s linear;
     }
+
+    @media screen and (max-width: $screen-md) {
+      text-align: center;
+    }
   }
 
   &__content {
-
     .content {
       display: none;
 
       &.active {
         display: block;
       }
-  
     }
-   
+
     &-title {
       margin-bottom: 20px;
       font-family: Raleway;
       text-align: center;
       text-transform: uppercase;
+
+      @media screen and (max-width: $screen-md) {
+        h3 {
+          font-size: 20px;
+        }
+      }
     }
 
     &-body {
@@ -404,12 +429,23 @@ SECTION#portfolio {
         font-family: Raleway;
         text-align: center;
         line-height: 1.5;
+
+        @media screen and (max-width: $screen-md) {
+          font-size: 18px;
+        }
       }
     }
 
     &-image {
       margin-bottom: 20px;
       text-align: center;
+
+      @media screen and (max-width: $screen-md) {
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 }

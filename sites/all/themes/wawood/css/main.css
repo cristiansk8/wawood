@@ -884,6 +884,16 @@ SECTION#portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 300px; }
+  @media screen and (max-width: 992px) {
+    .briefcase__tabs {
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+      scroll-snap-type: x mandatory;
+      white-space: nowrap;
+      overflow: auto; } }
   .briefcase__tabs .tab {
     margin-right: 15px;
     display: flex;
@@ -892,6 +902,11 @@ SECTION#portfolio {
     position: relative;
     background-color: #f2f2f2;
     cursor: pointer; }
+    @media screen and (max-width: 992px) {
+      .briefcase__tabs .tab {
+        min-width: 300px;
+        min-height: 300px;
+        scroll-snap-align: center; } }
     .briefcase__tabs .tab.active .briefcase__image {
       opacity: 1; }
     .briefcase__tabs .tab.active .briefcase__title h2 {
@@ -917,6 +932,10 @@ SECTION#portfolio {
   font-weight: bold;
   transition: opacity 0.4s linear; }
 
+@media screen and (max-width: 992px) {
+  .briefcase__title {
+    text-align: center; } }
+
 .briefcase__content .content {
   display: none; }
   .briefcase__content .content.active {
@@ -927,16 +946,26 @@ SECTION#portfolio {
   font-family: Raleway;
   text-align: center;
   text-transform: uppercase; }
+  @media screen and (max-width: 992px) {
+    .briefcase__content-title h3 {
+      font-size: 20px; } }
 
 .briefcase__content-body p {
   font-size: 1.5em;
   font-family: Raleway;
   text-align: center;
   line-height: 1.5; }
+  @media screen and (max-width: 992px) {
+    .briefcase__content-body p {
+      font-size: 18px; } }
 
 .briefcase__content-image {
   margin-bottom: 20px;
   text-align: center; }
+  @media screen and (max-width: 992px) {
+    .briefcase__content-image img {
+      max-width: 100%;
+      height: auto; } }
 
 .container {
   padding: 40px 20px;
