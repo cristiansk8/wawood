@@ -334,6 +334,18 @@ SECTION#portfolio {
       background-color: $gray-8;
       cursor: pointer;
 
+      &.active {
+        .briefcase__image {
+          opacity: 1;
+        }
+
+        .briefcase__title {
+          h2 {
+            opacity: 0;
+          }
+        }
+      }
+
       &:hover {
         .briefcase__image {
           opacity: 1;
@@ -369,6 +381,16 @@ SECTION#portfolio {
   }
 
   &__content {
+
+    .content {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+  
+    }
+   
     &-title {
       margin-bottom: 20px;
       font-family: Raleway;

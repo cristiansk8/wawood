@@ -892,6 +892,10 @@ SECTION#portfolio {
     position: relative;
     background-color: #f2f2f2;
     cursor: pointer; }
+    .briefcase__tabs .tab.active .briefcase__image {
+      opacity: 1; }
+    .briefcase__tabs .tab.active .briefcase__title h2 {
+      opacity: 0; }
     .briefcase__tabs .tab:hover .briefcase__image {
       opacity: 1; }
     .briefcase__tabs .tab:hover .briefcase__title h2 {
@@ -912,6 +916,11 @@ SECTION#portfolio {
   font-family: Raleway;
   font-weight: bold;
   transition: opacity 0.4s linear; }
+
+.briefcase__content .content {
+  display: none; }
+  .briefcase__content .content.active {
+    display: block; }
 
 .briefcase__content-title {
   margin-bottom: 20px;
