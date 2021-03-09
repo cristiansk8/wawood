@@ -195,6 +195,20 @@
     });
 
 
+    //briefcase
+    if ($('.briefcase')[0]) {
+
+      $tabsBriefcase = $('.tab');
+
+      $tabsBriefcase.each(function () {
+        $(this).click(function () {
+          let id = $(this).attr("id");
+          console.log(id);
+          $(this).addClass('active').siblings().removeClass('active');
+          $(`[data-id=${id}]`).addClass('active').siblings().removeClass('active');
+        })
+      })
+    }
   });
 
 }(jQuery));
