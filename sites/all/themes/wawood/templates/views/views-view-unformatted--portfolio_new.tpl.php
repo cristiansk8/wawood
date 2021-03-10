@@ -36,7 +36,7 @@
                     <?php
                     if (!empty($images)) {
                         foreach ($images as $image) {
-                            $img_url = file_create_url($image['uri']) ?? '';
+                            $img_url = file_create_url($image['uri']);
                             print '<div class="briefcase__content-image"><img src="' . $img_url . '"></div>';
                         }
                     }
