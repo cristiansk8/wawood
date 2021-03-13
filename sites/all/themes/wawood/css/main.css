@@ -1236,3 +1236,50 @@ SECTION#portfolio {
       font-family: Raleway;
       line-height: 2;
       color: #666; }
+
+.page-blog h1 {
+  margin: auto;
+  padding: 0;
+  font-size: 0;
+  visibility: hidden; }
+
+.page-blog #block-system-main {
+  margin-bottom: 30px;
+  padding-bottom: 60px;
+  position: relative; }
+  .page-blog #block-system-main::after {
+    content: "";
+    width: 180px;
+    height: 2.2px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000; }
+  .page-blog #block-system-main img {
+    width: 100%;
+    max-height: 700px; }
+
+.page-blog #block-views-blog-block-2 h2 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Raleway;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000; }
+
+.page-blog .blog-post__card {
+  display: flex; }
+  .page-blog .blog-post__card:nth-child(even) {
+    flex-direction: row-reverse; }
+
+.page-blog .blog-post__image {
+  flex: 1 1 40%; }
+  .page-blog .blog-post__image img {
+    width: 100%;
+    max-width: 100%; }
+
+.page-blog .blog-post__content {
+  flex: 1 1 60%; }

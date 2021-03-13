@@ -1,0 +1,49 @@
+.page-blog {
+  h1 {
+    margin: auto;
+    padding: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+
+  #block-system-main {
+    @include lower-border($pd-bottom: 60px, $m-bottom: 30px);
+
+    img {
+      width: 100%;
+      max-height: 700px;
+    }
+  }
+
+  //blog post
+  #block-views-blog-block-2 {
+    h2 {
+      margin-bottom: 40px;
+      text-align: center;
+      @include title-section;
+    }
+  }
+
+  .blog-post {
+    &__card {
+      display: flex;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__image {
+      flex: 1 1 40%;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__content {
+      flex: 1 1 60%;
+    }
+  }
+}
