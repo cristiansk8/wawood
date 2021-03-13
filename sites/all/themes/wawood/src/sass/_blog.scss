@@ -11,39 +11,148 @@
 
     img {
       width: 100%;
+      height: auto;
       max-height: 700px;
+      object-fit: cover;
     }
   }
 
   //blog post
   #block-views-blog-block-2 {
     h2 {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       text-align: center;
       @include title-section;
     }
   }
 
   .blog-post {
+    text-align: center;
+
+    &__headline {
+      margin-bottom: 100px;
+      font-weight: 100;
+      text-align: center;
+      @include title-brand(
+        $f-size: 3.4em,
+        $f-family: Chronicle,
+        $letter-space: 6px
+      );
+
+      @media screen and (max-width: $screen-md) {
+        margin-bottom: 40px;
+        font-size: 20px;
+      }
+    }
+
     &__card {
+      padding: 0 40px;
       display: flex;
+      align-items: center;
+      @include lower-border(
+        $border-width: 100%,
+        $pd-bottom: 65px,
+        $m-bottom: 65px
+      );
 
       &:nth-child(even) {
         flex-direction: row-reverse;
       }
+
+      @media screen and (max-width: $screen-md) {
+        padding: 0 15px 40px;
+        flex-direction: column;
+        @include lower-border(
+        $border-width: 100%,
+        $pd-bottom: 40px,
+        $m-bottom: 40px,
+      );
+
+        &:nth-child(even) {
+          flex-direction: column;
+        }
+      }
+
+      @media screen and (max-width: $screen-sm) {
+        padding: 0 0 40px;
+      }
     }
 
     &__image {
-      flex: 1 1 40%;
+      height: 550px;
+      flex: 1 1 50%;
 
       img {
         width: 100%;
+        height: 100%;
         max-width: 100%;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: $screen-md) {
+        width: 100%;
+        height: auto;
+        max-width: 550px;
+        max-height: 450px;
+        margin-bottom: 50px;
       }
     }
 
     &__content {
-      flex: 1 1 60%;
+      padding: 0 35px;
+      flex: 1 1 50%;
+
+      @media screen and (max-width: $screen-md) {
+        padding: 5px;
+      }
+    }
+
+    &__type {
+      width: max-content;
+      margin: 0 auto;
+      margin-bottom: 45px;
+      font-family: Raleway;
+      overflow: hidden;
+      @include top-border($pd-top: 25px, $m-top: 0);
+
+      @media screen and (max-width: $screen-md) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 35px;
+      h3 {
+        @include title-brand(
+          $f-size: 2.5em,
+          $f-family: Chronicle,
+          $letter-space: 6px
+        );
+      }
+
+      @media screen and (max-width: $screen-md) {
+        margin-bottom: 30px;
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__body {
+      margin-bottom: 55px;
+      font-size: $font-size-m;
+      font-family: Raleway;
+    }
+
+    &__view-more {
+      a {
+        padding: 10px 35px 10px 15px;
+        font-family: Raleway;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: $blue-wawood;
+        color: $white;
+      }
     }
   }
 }

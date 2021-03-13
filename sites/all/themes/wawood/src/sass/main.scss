@@ -40,7 +40,7 @@ $blue-wawood: rgb(50, 33, 255);
   font-size: $sizeValue + rem;
 }
 
-@mixin lower-border($border-width:180px,$pd-bottom:20px,$m-bottom:20px) {
+@mixin lower-border($border-width:180px,$border-height:2.2px,$pd-bottom:20px,$m-bottom:20px) {
   margin-bottom: $m-bottom;
   padding-bottom: $pd-bottom;
   position: relative;
@@ -48,12 +48,30 @@ $blue-wawood: rgb(50, 33, 255);
   &::after {
     content: "";
     width: $border-width;
-    height: 2.2px;
+    height: $border-height;
     margin: 0 auto;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: $black;
+  }
+}
+
+@mixin top-border($border-width:180px,$border-height:2.2px,$pd-top:20px,$m-top:20px) {
+  margin-top: $m-top;
+  padding-top: $pd-top;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: $border-width;
+    height: $border-height;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
     background-color: $black;
   }
 }
