@@ -46,7 +46,7 @@
     }
 
     &__card {
-      padding: 0 40px;
+      padding: 0 20px;
       display: flex;
       align-items: center;
       @include lower-border(
@@ -146,10 +146,12 @@
 
     &__view-more {
       a {
-        padding: 10px 35px 10px 15px;
+        padding: 12px 35px 12px 15px;
+        font-size: 1em;
         font-family: Raleway;
         text-transform: uppercase;
         text-decoration: none;
+        letter-spacing: 1.5px;
         background-color: $blue-wawood;
         color: $white;
       }
