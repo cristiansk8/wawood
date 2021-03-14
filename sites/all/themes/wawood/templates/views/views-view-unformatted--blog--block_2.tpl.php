@@ -11,7 +11,6 @@
             $title = $row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'];
             $body = $row->_field_data['nid']['entity']->body[$lenguage][0]['value'];
             $image_post = $row->_field_data['nid']['entity']->field_imagepost['und'];
-            $img_style = $row->field_field_imagepost[0];
             ?>
             
             <div class="blog-post__card">
