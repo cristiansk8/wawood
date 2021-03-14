@@ -9,10 +9,10 @@
 
             $lenguage = $row->_field_data['nid']['entity']->language;
             $title = $row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'];
-            $body = $row->_field_data['nid']['entity']->body[$lenguage][0]['value'];
+            $body = $row->_field_data['nid']['entity']->body[$lenguage][0]['summary'];
             $image_post = $row->_field_data['nid']['entity']->field_imagepost['und'];
             ?>
-            
+
             <div class="blog-post__card">
                 <div class="blog-post__image">
                     <?php
@@ -28,7 +28,9 @@
                         <h3> <?php print $title   ?></h3>
                     </div>
                     <div class="blog-post__body">
-                        <?php print $body  ?>
+                        <?php
+                        print $body
+                        ?>
                     </div>
                     <div class="blog-post__view-more">
                         <a href="<?php print $url_node; ?>"><?php print t('read more'); ?></a>

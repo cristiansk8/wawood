@@ -101,18 +101,20 @@
             $images_post = $node->field_images_post['und'];
             ?>
             <div class="blog-page__wrapper">
-                <button type="button" class="slick-prev slick-arrow">Prev</button>
-                <div class="blog-page__slider">
-                    <?php foreach ($images_node as $image) : ?>
-                        <div class="blog-page__slide">
-                            <?php
-                            $img_url = file_create_url($image['uri']);
-                            print '<img src="' . $img_url . '">';
-                            ?>
-                        </div>
-                    <?php endforeach ?>
-                </div>
-                <button type="button" class="slick-next slick-arrow">Next</button>
+                <?php if (!empty($images_node)) : ?>
+                    <button type="button" class="slick-prev slick-arrow">Prev</button>
+                    <div class="blog-page__slider">
+                        <?php foreach ($images_node as $image) : ?>
+                            <div class="blog-page__slide">
+                                <?php
+                                $img_url = file_create_url($image['uri']);
+                                print '<img src="' . $img_url . '">';
+                                ?>
+                            </div>
+                        <?php endforeach ?>
+                    </div>
+                    <button type="button" class="slick-next slick-arrow">Next</button>
+                <?php endif ?>
             </div>
             <div class="blog-page__content">
                 <div class="blog-page__type">
@@ -125,14 +127,16 @@
                     <?php print $body; ?>
                 </div>
                 <div class="blog-page__post-images">
-                    <?php foreach ($images_post as $image) : ?>
-                        <div class="blog-page__image">
-                            <?php
-                            $img_url = file_create_url($image['uri']);
-                            print '<img src="' . $img_url . '">';
-                            ?>
-                        </div>
-                    <?php endforeach ?>
+                    <?php if (!empty($images_post)) : ?>
+                        <?php foreach ($images_post as $image) : ?>
+                            <div class="blog-page__image">
+                                <?php
+                                $img_url = file_create_url($image['uri']);
+                                print '<img src="' . $img_url . '">';
+                                ?>
+                            </div>
+                        <?php endforeach ?>
+                    <?php endif ?>
                 </div>
             </div>
         </div>
@@ -153,4 +157,8 @@
         <?php endif; ?>
 </div>
 
-<?php /* print render($content['comments']); */ ?>
+<?php
+print views_embed_view('blog', 'block_3');
+?>
+
+<?php print render($content['comments']); ?>
