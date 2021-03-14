@@ -68,6 +68,49 @@
       dots: false
     });
 
+    //Slider Blog
+
+    $('.blog-page__slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      speed: 300,
+      prevArrow: $('.slick-prev'),
+      nextArrow: $('.slick-next'),
+      dots: false
+    });
+
+
+    //Slider More content 
+    $('.blog-more__container').slick({
+      infinite: true,
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      speed: 400,
+      prevArrow: false,
+      nextArrow: false,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 580,
+          settings: {
+            centerMode: false,
+            centerPadding: '0px',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        },
+      ]
+    });
+
     //Custom slider
 
     var st, slide = function (pos) {
