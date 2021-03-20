@@ -95,14 +95,14 @@
             hide($content['links']);
 
             $lenguage = $GLOBALS['language']->language;
-            $images_node = $node->field_images_slider['und'];
+            $images_node = $node->field_images_slider['und'] ?? '';
             $title_node = $node->title;
-            $body = $node->body[$lenguage][0]['value'];
-            $images_post = $node->field_images_post['und'];
+            $body = $node->body[$lenguage][0]['value'] ?? '';
+            $images_post = $node->field_images_post['und'] ?? '';
             ?>
             <div class="blog-page__wrapper">
                 <?php if (!empty($images_node)) : ?>
-                    <button type="button" class="slick-prev slick-arrow">Prev</button>
+                    <button type="button" class="slick-prev slick-arrow"><?php print t('Prev') ?></button>
                     <div class="blog-page__slider">
                         <?php foreach ($images_node as $image) : ?>
                             <div class="blog-page__slide">
@@ -113,7 +113,7 @@
                             </div>
                         <?php endforeach ?>
                     </div>
-                    <button type="button" class="slick-next slick-arrow">Next</button>
+                    <button type="button" class="slick-next slick-arrow"><?php print t('Next') ?></button>
                 <?php endif ?>
             </div>
             <div class="blog-page__content">
@@ -121,10 +121,12 @@
                     <?php print t('ABOUT MY JOB'); ?>
                 </div>
                 <div class="blog-page__title">
-                    <h1><?php print $title_node  ?></h1>
+                    <h1><?php print t($title_node)  ?></h1>
                 </div>
                 <div class="blog-page__body">
-                    <?php print $body; ?>
+                    <?php if (!empty($body)) : ?>
+                        <?php print $body; ?>
+                    <?php endif ?>
                 </div>
                 <div class="blog-page__post-images">
                     <?php if (!empty($images_post)) : ?>

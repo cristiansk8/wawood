@@ -25,7 +25,7 @@
                         <?php print t('ABOUT MY JOB'); ?>
                     </div>
                     <div class="blog-post__title">
-                        <h3> <?php print $title   ?></h3>
+                        <h3> <?php print t($title)   ?></h3>
                     </div>
                     <div class="blog-post__body">
                         <?php

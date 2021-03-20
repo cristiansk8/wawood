@@ -26,7 +26,7 @@ if (arg(0) == 'node' && is_numeric(arg(1))) {
                         ?>
                     </div>
                     <div class="blog-more__title">
-                        <h3> <?php print $title   ?></h3>
+                        <h3> <?php print t($title) ?></h3>
                     </div>
                 </div>
             <?php endif ?>

@@ -9,7 +9,7 @@
                 ?>
                 <?php print '<img class="briefcase__image" src="' . $image_url . '">' ?>
                 <div class="briefcase__title">
-                    <h2><?php echo $title ?></h2>
+                    <h2><?php echo t($title) ?></h2>
                 </div>
             </div>
         <?php endforeach ?>
@@ -27,7 +27,7 @@
                     : $images = '';
                 ?>
                 <div class="briefcase__content-title">
-                    <h3><?php echo $title  ?></h3>
+                    <h3><?php echo t($title)  ?></h3>
                 </div>
                 <div class="briefcase__content-body">
                     <p><?php echo $body ?></p>
