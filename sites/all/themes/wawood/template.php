@@ -5,7 +5,7 @@ function wawood_preprocess_html(&$vars)
   $title = field_get_items('node', $node, 'field_subhead');
   $image = field_get_items('node', $node, 'field_image');
   $description = field_get_items('node', $node, 'body');
-  
+
   $og_data = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
@@ -14,7 +14,7 @@ function wawood_preprocess_html(&$vars)
       'content' => strip_tags($title[0]['safe_value']),
     )
   );
-  
+
   drupal_add_html_head($og_data, 'og_title');
 
   $og_data = array(
@@ -25,7 +25,7 @@ function wawood_preprocess_html(&$vars)
       'content' => strip_tags($description[0]['safe_value']),
     )
   );
-  
+
   drupal_add_html_head($og_data, 'og_description');
 
   $image_uri      = $image[0]['uri'];
@@ -41,39 +41,51 @@ function wawood_preprocess_html(&$vars)
       'content' => file_create_url($derivative_uri, array('absolute' => true)),
     )
   );
-  
+
   drupal_add_html_head($og_data, 'og_image');
-}  
-  
+}
+
 function wawood_preprocess_page(&$vars)
 {
   $theme_path = base_path() . path_to_theme() . '/';
 
-//  $vars['logo_header_sm'] = _wawood_create_image_tag($theme_path . 'img/logo-header-sm.png');
+  //  $vars['logo_header_sm'] = _wawood_create_image_tag($theme_path . 'img/logo-header-sm.png');
   $vars['logo_header_lg'] = _wawood_create_image_tag($theme_path . 'img/logo-header-lg.png');
   $vars['logo_footer'] = _wawood_create_image_tag($theme_path . 'img/logo-footer.png');
 
-  if(drupal_is_front_page())
-  {
+  if (drupal_is_front_page()) {
     unset($vars['page']['content']['system_main']);
     $vars['title'] = '';
     drupal_set_title('');
   }
 }
 
-function wawood_language_switch_links_alter(array &$links, $type, $path) {
-  
-  foreach($links as $code => &$row)
-  {
+function wawood_language_switch_links_alter(array &$links, $type, $path)
+{
+
+  foreach ($links as $code => &$row) {
     $row['title'] = $code;
   }
 }
 
 /***
-* Helper utilities
-*/
+ * Helper utilities
+ */
 function _wawood_create_image_tag($url)
 {
   return '<img src="' . $url . '">';
 }
 
+function wawood_form_comment_form_alter(&$form, &$form_state, $form_id)
+{
+  if ($form_id == 'comment_node_blog_form') {
+
+    $form['actions']['preview'] = null;
+    $form['actions']['submit']['#value'] = t('Post comment');
+
+    $form['comment_body']['und'][0]['value']['#attributes']['placeholder'][] = t('Comment');
+    $form['field_name']['und'][0]['value']['#attributes']['placeholder'][] = t('Name');
+    $form['field_e_mail']['und'][0]['value']['#attributes']['placeholder'][] = t('E-mail');
+    $form['field_website']['und'][0]['value']['#attributes']['placeholder'][] = t('Website');
+  }
+}
