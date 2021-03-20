@@ -1,0 +1,57 @@
+.block-wawood-instagram-block {
+  > h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    @include title-section;
+  }
+}
+
+.instagram-posts {
+  margin: 0;
+  h3 {
+    margin-bottom: 30px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      @include title-brand(
+        $f-size: $font-size-m,
+        $f-family: Raleway,
+        $letter-space: 6px
+      );
+      @media screen and (max-width: $screen-sm) {
+          
+      }
+    }
+  }
+
+  &__image {
+    padding: 0 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slick-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 15px;
+      &::marker {
+        font-size: 1.6em;
+      }
+    }
+
+    button {
+      border: none;
+      font-size: 0;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+}
