@@ -13,7 +13,7 @@ if (arg(0) == 'node' && is_numeric(arg(1))) {
             $url_node = url('node/' . $row->nid, $options);
 
             $lenguage = $row->_field_data['nid']['entity']->language;
-            $title = $row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'];
+            $title = $row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'] ?? '';
             $image_post = $row->_field_data['nid']['entity']->field_imagepost['und'];
 
             ?>
@@ -26,8 +26,10 @@ if (arg(0) == 'node' && is_numeric(arg(1))) {
                         ?>
                     </div>
                     <div class="blog-more__title">
-                        <h3> <?php print t($title) ?></h3>
+                        <?php if (!empty($title)) : ?>
+                            <h3> <?php print t($title) ?></h3>
                     </div>
+                <?php endif ?>
                 </div>
             <?php endif ?>
         <?php endforeach ?>

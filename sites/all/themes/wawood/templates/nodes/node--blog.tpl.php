@@ -159,8 +159,12 @@
         <?php endif; ?>
 </div>
 
+
 <?php
 print views_embed_view('blog', 'block_3');
 ?>
 
-<?php print render($content['comments']); ?>
+
+<div class="comments-blog">
+    <?php print render($content['comments']); ?>
+</div>
