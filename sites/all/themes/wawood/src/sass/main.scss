@@ -29,7 +29,7 @@ $blue-wawood: rgb(50, 33, 255);
   $letter-space: 1px
 ) {
   font-size: $f-size;
-  font-family: "";
+  font-family: $f-family;
   text-transform: uppercase;
   color: $color;
   letter-spacing: $letter-space;
@@ -249,3 +249,4 @@ FOOTER {
 @import "about-us";
 @import "blog";
 @import 'internal-blog';
+@import 'instagram-post';
