@@ -1420,6 +1420,7 @@ SECTION#portfolio {
     display: none; }
 
 .comments-blog .comment-form > div {
+  margin-bottom: 30px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-rows: auto repeat(2, 40px);
