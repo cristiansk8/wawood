@@ -43,6 +43,14 @@ function wawood_preprocess_html(&$vars)
   );
 
   drupal_add_html_head($og_data, 'og_image');
+
+  $options = array(
+    'type' => 'external',
+    'defer' => TRUE,
+  );
+
+  drupal_add_js('https://apps.elfsight.com/p/platform.js', $options);
+  
 }
 
 function wawood_preprocess_page(&$vars)

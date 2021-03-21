@@ -102,7 +102,7 @@
             ?>
             <div class="blog-page__wrapper">
                 <?php if (!empty($images_node)) : ?>
-                    <button type="button" class="slick-prev slick-arrow"><?php print t('Prev') ?></button>
+                    <button type="button" class="slick-prev slick-arrow"><?php print 'Prev' ?></button>
                     <div class="blog-page__slider">
                         <?php foreach ($images_node as $image) : ?>
                             <div class="blog-page__slide">
@@ -113,7 +113,7 @@
                             </div>
                         <?php endforeach ?>
                     </div>
-                    <button type="button" class="slick-next slick-arrow"><?php print t('Next') ?></button>
+                    <button type="button" class="slick-next slick-arrow"><?php print 'Next' ?></button>
                 <?php endif ?>
             </div>
             <div class="blog-page__content">
@@ -168,3 +168,5 @@ print views_embed_view('blog', 'block_3');
 <div class="comments-blog">
     <?php print render($content['comments']); ?>
 </div>
+
+<div class="elfsight-app-aae4dc2f-7c25-4d2c-b886-a20bad1c5c10"></div>
