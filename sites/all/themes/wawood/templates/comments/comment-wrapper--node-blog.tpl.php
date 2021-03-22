@@ -35,9 +35,20 @@
  */
 ?>
 <div id="comments" class="<?php print $classes; ?>" <?php print $attributes; ?>>
-    <?php if ($content['comments'] && $node->type != 'forum') : ?>
+
+    <?php
+    $comment_number = 0;
+
+    foreach ($content['comments'] as $delta => $row) {
+        if (is_numeric($delta)) {
+            $comment_number++;
+        }
+    }
+    ?>
+
+    <?php if ($node->type != 'forum') : ?>
         <?php print render($title_prefix); ?>
-        <h2 class="title"><?php print t('Comments'); ?></h2>
+        <h2 class="title"><?php print $comment_number . t(' Comments'); ?></h2>
         <h2 class="title comment-form open-form"><?php print t('Add new comment'); ?></h2>
         <?php print render($title_suffix); ?>
     <?php endif; ?>
