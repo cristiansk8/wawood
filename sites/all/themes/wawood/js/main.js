@@ -283,6 +283,21 @@
         })
       })
     }
+
+    //pop up comment
+    $('.open-form').on('click', function () {
+      console.log('click!');
+      $('#popup').fadeIn('slow');
+      $('.popup-overlay').fadeIn('slow');
+      $('.popup-overlay').height('100%');
+      return false;
+    });
+
+    $('#close').on('click', function () {
+      $('#popup').fadeOut('slow');
+      $('.popup-overlay').fadeOut('slow');
+      return false;
+    });
   });
 
 }(jQuery));

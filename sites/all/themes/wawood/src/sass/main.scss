@@ -1,6 +1,8 @@
 $max-page-width: 1200px;
 $margin-top-block: 40px;
-$font-normal: "Chronicle", times, sans;
+$font-normal: "Chronicle",
+times,
+sans;
 
 $gray-1: #444;
 $gray-2: #666;
@@ -22,12 +24,10 @@ $blue-wawood: rgb(50, 33, 255);
   color: $black;
 }
 
-@mixin title-brand(
-  $f-size: 1em,
+@mixin title-brand($f-size: 1em,
   $f-family: "arial",
   $color: $blue-wawood,
-  $letter-space: 1px
-) {
+  $letter-space: 1px) {
   font-size: $f-size;
   font-family: $f-family;
   text-transform: uppercase;
@@ -40,7 +40,7 @@ $blue-wawood: rgb(50, 33, 255);
   font-size: $sizeValue + rem;
 }
 
-@mixin lower-border($border-width:180px,$border-height:2.2px,$pd-bottom:20px,$m-bottom:20px) {
+@mixin lower-border($border-width:180px, $border-height:2.2px, $pd-bottom:20px, $m-bottom:20px) {
   margin-bottom: $m-bottom;
   padding-bottom: $pd-bottom;
   position: relative;
@@ -58,7 +58,7 @@ $blue-wawood: rgb(50, 33, 255);
   }
 }
 
-@mixin top-border($border-width:180px,$border-height:2.2px,$pd-top:20px,$m-top:20px) {
+@mixin top-border($border-width:180px, $border-height:2.2px, $pd-top:20px, $m-top:20px) {
   margin-top: $m-top;
   padding-top: $pd-top;
   position: relative;
@@ -84,8 +84,7 @@ $blue-wawood: rgb(50, 33, 255);
 @import "sprites";
 @import "mobile-menu";
 
-HTML {
-}
+HTML {}
 
 BODY {
   font-family: $font-normal;
@@ -116,6 +115,10 @@ B {
 
 .bg-gray-8 {
   background-color: $gray-8;
+}
+
+#page-wrapper {
+  overflow: hidden;
 }
 
 #block-locale-language {
@@ -197,6 +200,7 @@ B {
 
   @media (max-width: - 1) {
     right: 18px;
+
     .social-net {
       top: 60px;
     }
@@ -204,6 +208,7 @@ B {
 }
 
 .fa {
+
   &.angle-right,
   &.angle-left {
     display: inline-block;
@@ -251,4 +256,3 @@ FOOTER {
 @import 'comments';
 @import 'internal-blog';
 @import 'instagram-post';
-
