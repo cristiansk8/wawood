@@ -95,10 +95,10 @@
             hide($content['links']);
 
             $lenguage = $GLOBALS['language']->language;
-            $images_node = $node->field_images_slider['und'] ?? '';
+            $images_node = $node->field_images_slider['und'];
             $title_node = $node->title;
-            $body = $node->body[$lenguage][0]['value'] ?? '';
-            $images_post = $node->field_images_post['und'] ?? '';
+            $body = $node->body[$lenguage][0]['value'];
+            $images_post = $node->field_images_post['und'];
             ?>
             <div class="blog-page__wrapper">
                 <?php if (!empty($images_node)) : ?>
