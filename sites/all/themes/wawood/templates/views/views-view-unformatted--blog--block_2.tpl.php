@@ -6,31 +6,48 @@
             //url node
             $options = array('absolute' => TRUE);
             $url_node = url('node/' . $row->nid, $options);
-
             $lenguage = $row->_field_data['nid']['entity']->language;
-            $title = $row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'];
-            $body = $row->_field_data['nid']['entity']->body[$lenguage][0]['summary'];
-            $image_post = $row->_field_data['nid']['entity']->field_imagepost['und'];
+
+            $title = '';
+            $body = '';
+            $image_post = '';
+
+            if (isset($row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'])) {
+                $title = $row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'];
+            }
+            if ($row->_field_data['nid']['entity']->body[$lenguage][0]['summary']) {
+                $body = $row->_field_data['nid']['entity']->body[$lenguage][0]['summary'];
+            }
+            if ($row->_field_data['nid']['entity']->field_imagepost['und']) {
+                $image_post = $row->_field_data['nid']['entity']->field_imagepost['und'];
+            }
+
             ?>
 
             <div class="blog-post__card">
                 <div class="blog-post__image">
-                    <?php
-                    $img_url = file_create_url($image_post[0]['uri']);
-                    print '<img src="' . $img_url . '">';
-                    ?>
+                    <?php if (!empty($image_post[0]['uri'])) : ?>
+                        <?php
+                        $img_url = file_create_url($image_post[0]['uri']);
+                        print '<img src="' . $img_url . '">';
+                        ?>
+                    <?php endif ?>
                 </div>
                 <div class="blog-post__content">
                     <div class="blog-post__type">
                         <?php print t('ABOUT MY JOB'); ?>
                     </div>
                     <div class="blog-post__title">
-                        <h3> <?php print t($title)   ?></h3>
+                        <?php if (!empty($title)) : ?>
+                            <h3> <?php print t($title) ?></h3>
+                        <?php endif ?>
                     </div>
                     <div class="blog-post__body">
-                        <?php
-                        print $body
-                        ?>
+                        <?php if (!empty($body)) : ?>
+                            <?php
+                            print $body
+                            ?>
+                        <?php endif ?>
                     </div>
                     <div class="blog-post__view-more">
                         <a href="<?php print $url_node; ?>"><?php print t('read more'); ?></a>

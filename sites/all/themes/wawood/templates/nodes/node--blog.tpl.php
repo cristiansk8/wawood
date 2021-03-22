@@ -93,12 +93,28 @@
             // We hide the comments and links now so that we can render them later.
             hide($content['comments']);
             hide($content['links']);
-
             $lenguage = $GLOBALS['language']->language;
-            $images_node = $node->field_images_slider['und'];
-            $title_node = $node->title;
-            $body = $node->body[$lenguage][0]['value'];
-            $images_post = $node->field_images_post['und'];
+
+            $images_node = '';
+            $title_node = '';
+            $body = '';
+            $images_post = '';
+
+            if (isset($node->field_images_slider['und'])) {
+                $images_node = $node->field_images_slider['und'];
+            }
+            if (isset($node->title)) {
+                $title_node = $node->title;
+            }
+
+            if (isset($node->body[$lenguage][0]['value'])) {
+                $body = $node->body[$lenguage][0]['value'];
+            }
+
+            if (isset($node->field_images_post['und'])) {
+                $images_post = $node->field_images_post['und'];
+            }
+
             ?>
             <div class="blog-page__wrapper">
                 <?php if (!empty($images_node)) : ?>
@@ -121,7 +137,9 @@
                     <?php print t('ABOUT MY JOB'); ?>
                 </div>
                 <div class="blog-page__title">
-                    <h1><?php print t($title_node)  ?></h1>
+                    <?php if (!empty($title_node)) : ?>
+                        <h1><?php print t($title_node)  ?></h1>
+                    <?php endif ?>
                 </div>
                 <div class="blog-page__body">
                     <?php if (!empty($body)) : ?>

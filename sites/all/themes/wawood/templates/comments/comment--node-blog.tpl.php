@@ -60,11 +60,27 @@
 
 <div class="comment">
   <div class="comment__info">
-    <span class="comment__author"><?php print $comment->field_name['und'][0]['value'] ?></span>
-    <span class="comment__created"><?php print  date('m/d/Y H:i:s', $comment->created); ?></span>
+    <span class="comment__author">
+      <?php
+      if (isset($comment->field_name['und'][0]['value'])) {
+        print $comment->field_name['und'][0]['value'];
+      }
+      ?>
+    </span>
+    <span class="comment__created">
+      <?php
+      if (isset($comment->created)) {
+        print  date('m/d/Y H:i:s', $comment->created);
+      }
+      ?>
+    </span>
   </div>
   <div class="comment__body">
-    <?php print $comment->comment_body['und'][0]['value'] ?>
+    <?php
+    if (isset($comment->comment_body['und'][0]['value'])) {
+      print $comment->comment_body['und'][0]['value'];
+    }
+    ?>
   </div>
   <?php print render($content['links']); ?>
 </div>
