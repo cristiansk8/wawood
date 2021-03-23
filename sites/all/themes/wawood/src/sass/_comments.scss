@@ -7,9 +7,11 @@
         font-size: 16px;
         font-family: Raleway;
         text-transform: uppercase;
+        user-select: none;
 
         &:first-child {
             margin-right: 20px;
+            font-variant-numeric: lining-nums;
         }
 
         &:nth-child(2) {
@@ -78,8 +80,7 @@
         >div {
             margin-bottom: 30px;
             display: grid;
-            grid-template-rows: repeat(3, 1fr);
-            grid-template-rows: auto repeat(2, 40px);
+            grid-template-rows: auto repeat(2, 40px) auto;
             grid-template-areas:
                 'body body'
                 'name email'
@@ -148,14 +149,26 @@
 
         .field-name-field-name {
             grid-area: name;
+
+            * {
+                line-height: 0;
+            }
         }
 
         .field-name-field-e-mail {
             grid-area: email;
+
+            * {
+                line-height: 0;
+            }
         }
 
         .field-name-field-website {
             grid-area: website;
+
+            * {
+                line-height: 0;
+            }
         }
 
         .form-actions {

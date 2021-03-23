@@ -1409,9 +1409,11 @@ SECTION#portfolio {
     display: inline-block;
     font-size: 16px;
     font-family: Raleway;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    user-select: none; }
     .comments-blog .title:first-child {
-      margin-right: 20px; }
+      margin-right: 20px;
+      font-variant-numeric: lining-nums; }
     .comments-blog .title:nth-child(2) {
       cursor: pointer; }
     @media screen and (max-width: 992px) {
@@ -1453,8 +1455,7 @@ SECTION#portfolio {
   .comments-blog .comment-form > div {
     margin-bottom: 30px;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-rows: auto repeat(2, 40px);
+    grid-template-rows: auto repeat(2, 40px) auto;
     grid-template-areas: 'body body' 'name email' 'website .' 'actions actions';
     grid-gap: 15px 50px; }
     @media screen and (max-width: 992px) {
@@ -1497,10 +1498,16 @@ SECTION#portfolio {
             font-size: 12px; } }
   .comments-blog .comment-form .field-name-field-name {
     grid-area: name; }
+    .comments-blog .comment-form .field-name-field-name * {
+      line-height: 0; }
   .comments-blog .comment-form .field-name-field-e-mail {
     grid-area: email; }
+    .comments-blog .comment-form .field-name-field-e-mail * {
+      line-height: 0; }
   .comments-blog .comment-form .field-name-field-website {
     grid-area: website; }
+    .comments-blog .comment-form .field-name-field-website * {
+      line-height: 0; }
   .comments-blog .comment-form .form-actions {
     margin-top: 70px;
     display: flex;

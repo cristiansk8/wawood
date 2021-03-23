@@ -286,7 +286,6 @@
 
     //pop up comment
     $('.open-form').on('click', function () {
-      console.log('click!');
       $('#popup').fadeIn('slow');
       $('.popup-overlay').fadeIn('slow');
       $('.popup-overlay').height('100%');
