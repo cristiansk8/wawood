@@ -83,9 +83,9 @@
     //Slider More content 
     $('.blog-more__container').slick({
       infinite: true,
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 3,
+      //centerMode: true,
+      centerPadding: '0',
+      slidesToShow: 4,
       speed: 400,
       prevArrow: false,
       nextArrow: false,
