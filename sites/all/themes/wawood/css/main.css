@@ -1721,7 +1721,8 @@ SECTION#portfolio {
 .blog-more {
   margin-top: 20px; }
   .blog-more__card {
-    padding: 0 10px; }
+    padding: 0 10px;
+    outline: none; }
   .blog-more__headline {
     width: max-content;
     margin: 0 auto;
@@ -1736,14 +1737,18 @@ SECTION#portfolio {
       height: 100%;
       max-width: 100%;
       object-fit: cover; }
-  .blog-more__title h3 {
-    width: max-content;
-    margin: 15px auto;
-    font-size: 1.2em;
-    font-family: Raleway;
-    text-align: center;
-    text-transform: uppercase;
-    overflow: hidden; }
+  .blog-more__title a {
+    text-decoration: none; }
+    .blog-more__title a h3 {
+      margin: 15px auto;
+      width: max-content;
+      font-size: 1.2em;
+      font-family: Raleway;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      overflow: hidden; }
   .blog-more .slick-dots {
     margin-top: 20px;
     display: flex;

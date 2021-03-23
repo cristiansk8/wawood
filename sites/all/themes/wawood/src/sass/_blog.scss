@@ -123,6 +123,7 @@
 
     &__title {
       margin-bottom: 35px;
+
       h3 {
         @include title-brand(
           $f-size: 2.5em,
