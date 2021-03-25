@@ -15,10 +15,10 @@
             if (isset($row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'])) {
                 $title = $row->_field_data['nid']['entity']->title_field[$lenguage][0]['value'];
             }
-            if ($row->_field_data['nid']['entity']->body[$lenguage][0]['summary']) {
+            if (isset($row->_field_data['nid']['entity']->body[$lenguage][0]['summary'])) {
                 $body = $row->_field_data['nid']['entity']->body[$lenguage][0]['summary'];
             }
-            if ($row->_field_data['nid']['entity']->field_imagepost['und']) {
+            if (isset($row->_field_data['nid']['entity']->field_imagepost['und'])) {
                 $image_post = $row->_field_data['nid']['entity']->field_imagepost['und'];
             }
 
