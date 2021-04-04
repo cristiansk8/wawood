@@ -1402,8 +1402,10 @@ SECTION#portfolio {
     background-color: #3221ff;
     color: #fff; }
 
+.page-comment-reply,
 .comments-blog {
   margin-top: 45px; }
+  .page-comment-reply .title,
   .comments-blog .title {
     margin-bottom: 40px;
     display: inline-block;
@@ -1411,23 +1413,30 @@ SECTION#portfolio {
     font-family: Raleway;
     text-transform: uppercase;
     user-select: none; }
+    .page-comment-reply .title:first-child,
     .comments-blog .title:first-child {
       margin-right: 20px;
       font-variant-numeric: lining-nums; }
+    .page-comment-reply .title:nth-child(2),
     .comments-blog .title:nth-child(2) {
       cursor: pointer; }
     @media screen and (max-width: 992px) {
+      .page-comment-reply .title,
       .comments-blog .title {
         font-size: 12px;
         margin: 5px 0; }
+        .page-comment-reply .title:nth-child(2),
         .comments-blog .title:nth-child(2) {
           margin-bottom: 10px; } }
+  .page-comment-reply .comment,
   .comments-blog .comment {
     margin-bottom: 20px;
     padding: 25px 40px;
     background-color: #f2f2f2; }
+    .page-comment-reply .comment__info,
     .comments-blog .comment__info {
       margin-bottom: 15px; }
+    .page-comment-reply .comment__author,
     .comments-blog .comment__author {
       margin-right: 10px;
       font-size: 16px;
@@ -1435,23 +1444,30 @@ SECTION#portfolio {
       font-weight: bold;
       text-transform: uppercase;
       color: #666; }
+    .page-comment-reply .comment__created,
     .comments-blog .comment__created {
       font-weight: bold; }
+    .page-comment-reply .comment__body,
     .comments-blog .comment__body {
       font-size: 16px; }
+    .page-comment-reply .comment .links,
     .comments-blog .comment .links {
       margin-top: 30px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       list-style: none; }
+      .page-comment-reply .comment .links li,
       .comments-blog .comment .links li {
         margin-right: 10px; }
+    .page-comment-reply .comment .field-label,
     .comments-blog .comment .field-label {
       display: none; }
     @media screen and (max-width: 992px) {
+      .page-comment-reply .comment,
       .comments-blog .comment {
         padding: 25px; } }
+  .page-comment-reply .comment-form > div,
   .comments-blog .comment-form > div {
     margin-bottom: 30px;
     display: grid;
@@ -1459,29 +1475,39 @@ SECTION#portfolio {
     grid-template-areas: 'body body' 'name email' 'website .' 'actions actions';
     grid-gap: 15px 50px; }
     @media screen and (max-width: 992px) {
+      .page-comment-reply .comment-form > div,
       .comments-blog .comment-form > div {
         display: flex;
         flex-direction: column; } }
+  .page-comment-reply .comment-form .form-item.form-type-item,
+  .page-comment-reply .comment-form .form-item-name,
   .comments-blog .comment-form .form-item.form-type-item,
   .comments-blog .comment-form .form-item-name {
     display: none; }
+  .page-comment-reply .comment-form .form-item input,
   .comments-blog .comment-form .form-item input {
     width: 100%;
     max-width: 100%;
     padding: 8px 10px;
     border: 1px solid #80858e;
     background-color: #f2f2f2; }
+    .page-comment-reply .comment-form .form-item input::placeholder,
     .comments-blog .comment-form .form-item input::placeholder {
       font-family: Raleway;
       text-transform: uppercase; }
       @media screen and (max-width: 992px) {
+        .page-comment-reply .comment-form .form-item input::placeholder,
         .comments-blog .comment-form .form-item input::placeholder {
           font-size: 12px; } }
+  .page-comment-reply .comment-form label,
+  .page-comment-reply .comment-form a,
   .comments-blog .comment-form label,
   .comments-blog .comment-form a {
     font-size: 0; }
+  .page-comment-reply .comment-form .field-name-comment-body,
   .comments-blog .comment-form .field-name-comment-body {
     grid-area: body; }
+    .page-comment-reply .comment-form .field-name-comment-body textarea,
     .comments-blog .comment-form .field-name-comment-body textarea {
       width: 100%;
       height: 150px;
@@ -1490,24 +1516,33 @@ SECTION#portfolio {
       border: 1px solid #80858e;
       background-color: #f2f2f2;
       resize: none; }
+      .page-comment-reply .comment-form .field-name-comment-body textarea::placeholder,
       .comments-blog .comment-form .field-name-comment-body textarea::placeholder {
         font-family: Raleway;
         text-transform: uppercase; }
         @media screen and (max-width: 992px) {
+          .page-comment-reply .comment-form .field-name-comment-body textarea::placeholder,
           .comments-blog .comment-form .field-name-comment-body textarea::placeholder {
             font-size: 12px; } }
+  .page-comment-reply .comment-form .field-name-field-name,
   .comments-blog .comment-form .field-name-field-name {
     grid-area: name; }
+    .page-comment-reply .comment-form .field-name-field-name *,
     .comments-blog .comment-form .field-name-field-name * {
       line-height: 0; }
+  .page-comment-reply .comment-form .field-name-field-e-mail,
   .comments-blog .comment-form .field-name-field-e-mail {
     grid-area: email; }
+    .page-comment-reply .comment-form .field-name-field-e-mail *,
     .comments-blog .comment-form .field-name-field-e-mail * {
       line-height: 0; }
+  .page-comment-reply .comment-form .field-name-field-website,
   .comments-blog .comment-form .field-name-field-website {
     grid-area: website; }
+    .page-comment-reply .comment-form .field-name-field-website *,
     .comments-blog .comment-form .field-name-field-website * {
       line-height: 0; }
+  .page-comment-reply .comment-form .form-actions,
   .comments-blog .comment-form .form-actions {
     margin-top: 70px;
     display: flex;
@@ -1517,13 +1552,16 @@ SECTION#portfolio {
     grid-area: actions;
     text-align: center; }
     @media screen and (max-width: 992px) {
+      .page-comment-reply .comment-form .form-actions,
       .comments-blog .comment-form .form-actions {
         margin-top: 30px; } }
+    .page-comment-reply .comment-form .form-actions::after,
     .comments-blog .comment-form .form-actions::after {
       content: '\003e';
       font-size: 16px;
       font-weight: bold;
       color: #3221ff; }
+  .page-comment-reply .comment-form .form-submit,
   .comments-blog .comment-form .form-submit {
     margin-right: 3px;
     border: none;
@@ -1533,6 +1571,7 @@ SECTION#portfolio {
     background-color: transparent;
     color: #3221ff; }
     @media screen and (max-width: 992px) {
+      .page-comment-reply .comment-form .form-submit,
       .comments-blog .comment-form .form-submit {
         font-size: 14px; } }
 
