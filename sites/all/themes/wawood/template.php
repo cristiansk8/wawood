@@ -1,4 +1,5 @@
 <?php
+
 function wawood_preprocess_html(&$vars)
 {
   $node = node_load(17);
@@ -50,7 +51,6 @@ function wawood_preprocess_html(&$vars)
   );
 
   drupal_add_js('https://apps.elfsight.com/p/platform.js', $options);
-  
 }
 
 function wawood_preprocess_page(&$vars)
@@ -87,13 +87,17 @@ function _wawood_create_image_tag($url)
 function wawood_form_comment_form_alter(&$form, &$form_state, $form_id)
 {
   if ($form_id == 'comment_node_blog_form') {
-
     $form['actions']['preview'] = null;
+    $form['buttons']['submit']['#submit'][] = 'functionSubmit';
+
     $form['actions']['submit']['#value'] = t('Post comment');
 
     $form['comment_body']['und'][0]['value']['#attributes']['placeholder'][] = t('Comment');
     $form['field_name']['und'][0]['value']['#attributes']['placeholder'][] = t('Name');
     $form['field_e_mail']['und'][0]['value']['#attributes']['placeholder'][] = t('E-mail');
     $form['field_website']['und'][0]['value']['#attributes']['placeholder'][] = t('Website');
+
+    $form['#action'] = null;
   }
 }
+
