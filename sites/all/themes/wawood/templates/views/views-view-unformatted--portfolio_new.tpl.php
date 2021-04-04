@@ -4,12 +4,12 @@
             <div id="<?php echo $delta ?>" class="tab briefcase__tab-<?php echo $delta ?>  <?php echo $delta == 0 ? 'active' : '' ?>">
                 <?php
                 global $language;
-                $lang_name = $language->language;
+                $lenguage = $GLOBALS['language']->language;
                 $title = '';
                 $image_url = '';
 
-                if (isset($row->node_field_data_field_portfolio_title)) {
-                    $title = $row->node_field_data_field_portfolio_title;
+                if (isset($row->_field_data['node_field_data_field_portfolio_nid']['entity']->title_field[$lenguage][0]['value'])) {
+                    $title = $row->_field_data['node_field_data_field_portfolio_nid']['entity']->title_field[$lenguage][0]['value'];
                 }
 
                 if (isset($row->field_field_image[0]['raw']['uri'])) {
@@ -31,11 +31,12 @@
         <?php foreach ($view->result as $delta => $row) : ?>
             <div class="content briefcase__content-<?php echo $delta ?> <?php echo $delta == 0 ? 'active' : '' ?>" data-id="<?php echo $delta ?>">
                 <?php
+                $lenguage = $GLOBALS['language']->language;
                 $title = '';
                 $body = '';
 
-                if (isset($row->node_field_data_field_portfolio_title)) {
-                    $title = $row->node_field_data_field_portfolio_title;
+                if (isset($row->_field_data['node_field_data_field_portfolio_nid']['entity']->title_field[$lenguage][0]['value'])) {
+                    $title = $row->_field_data['node_field_data_field_portfolio_nid']['entity']->title_field[$lenguage][0]['value'];
                 }
 
                 if (isset($row->field_body[0]['raw']['value'])) {

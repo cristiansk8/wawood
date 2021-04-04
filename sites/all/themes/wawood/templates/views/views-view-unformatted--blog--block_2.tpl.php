@@ -6,7 +6,7 @@
             //url node
             $options = array('absolute' => TRUE);
             $url_node = url('node/' . $row->nid, $options);
-            $lenguage = $row->_field_data['nid']['entity']->language;
+            $lenguage = $GLOBALS['language']->language;
 
             $title = '';
             $body = '';
