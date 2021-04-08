@@ -8,6 +8,10 @@ $menu-height-fixed: 50px;
   max-width: $max-page-width;
 	height: $menu-height-static;
 	
+  .logo-svg {
+    margin-left: -90px;
+  }
+
 	.menu-bar
 	{
 		background: $white;
@@ -15,6 +19,21 @@ $menu-height-fixed: 50px;
 		position: relative;
 
 	}
+
+  $screen-xl: 1250px;
+
+  @media (min-width:$screen-md) and (max-width: $screen-xl)  {
+    .logo-svg {
+      width: 250px;
+      margin-left: 0;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .menu-bar {
+      @include fsize(1.1);
+    }
+  }
 
 	@media (min-width:$screen-sm) AND (max-width:$screen-md - 1)
   {
@@ -35,7 +54,7 @@ UL#main-menu
   > LI
   {
     position: relative;
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 0;
 
     A

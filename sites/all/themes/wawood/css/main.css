@@ -137,10 +137,21 @@ IMG.fullwidth, .fullwidth-img IMG {
   z-index: 20;
   max-width: 1200px;
   height: 70px; }
+  #main-nav .logo-svg {
+    margin-left: -90px; }
   #main-nav .menu-bar {
     background: #fff;
     padding-bottom: 20px;
     position: relative; }
+  @media (min-width: 992px) and (max-width: 1250px) {
+    #main-nav .logo-svg {
+      width: 250px;
+      margin-left: 0;
+      background-position: center center;
+      background-repeat: no-repeat; }
+    #main-nav .menu-bar {
+      font-size: 11px;
+      font-size: 1.1rem; } }
   @media (min-width: 768px) and (max-width: 991px) {
     #main-nav .logo IMG {
       width: 300px; } }
@@ -151,7 +162,7 @@ UL#main-menu {
   right: 80px; }
   UL#main-menu > LI {
     position: relative;
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 0; }
     UL#main-menu > LI A {
       text-decoration: none;
