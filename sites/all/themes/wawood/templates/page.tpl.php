@@ -3,7 +3,7 @@
     <header>
 
       <nav id="main-nav" class="hidden-xs hidden-sm">
-        <div class="menu-bar font-size-s color-gray-3">
+        <div class="menu-bar font-size-xs color-gray-3">
           <a class="logo" href="<?php print base_path() ?>#home"><?php print $logo_header_lg ?></a>
           <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('clean', 'horizontal', 'clearfix', 'clean-a')))); ?>
           <?php print render($page['lang_switcher']) ?>
